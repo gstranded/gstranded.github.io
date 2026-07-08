@@ -13,32 +13,20 @@
   <body>
     <a class="skip-link" href="#main">跳至内容</a>
 
-    <header class="notion-topbar">
-      <div class="topbar-left">
-        <span class="hamburger" aria-hidden="true">☰</span>
-        <a class="workspace-mark" href="#home" aria-label="返回顶部">N</a>
-        <span class="workspace-name" data-en="Hsunshinez Gao">高海圳</span>
-      </div>
-
-      <div class="topbar-title">
-        <strong data-en="Personal Homepage">个人主页</strong>
-        <span data-en="LLM Safety · Agent Systems">大模型安全 · Agent 系统</span>
-      </div>
-
+    <header class="site-header">
+      <nav class="site-nav" aria-label="页面导航">
+        <a href="#home" data-en="Profile">个人信息</a>
+        <a href="#skills" data-en="Skills">技能描述</a>
+        <a href="#experience" data-en="Experience">工作经历</a>
+        <a href="#competitions" data-en="Competitions">比赛经历</a>
+        <a href="#research" data-en="Research">论文专利</a>
+        <a href="#blog" data-en="Blog">博客</a>
+      </nav>
       <div class="topbar-actions">
         <button type="button" class="active" data-lang="zh">中文</button>
         <button type="button" data-lang="en">EN</button>
       </div>
     </header>
-
-    <nav class="notion-subbar" aria-label="页面导航">
-      <a href="#home" data-en="Home">高海圳</a>
-      <a href="#skills" data-en="Skills">技能描述</a>
-      <a href="#experience" data-en="Experience">工作经历</a>
-      <a href="#research" data-en="Research">论文专利</a>
-      <a href="#competitions" data-en="Competitions">比赛经历</a>
-      <a href="#blog" data-en="Blog">博客</a>
-    </nav>
 
     <main id="main" class="notion-page">
       <section class="cover" aria-label="封面图"></section>
@@ -140,7 +128,7 @@
 
               <div class="metric-row" aria-label="主页数据">
                 <article>
-                  <strong>3</strong>
+                  <strong>2</strong>
                   <span data-en="Publications/submissions">论文发表/投稿</span>
                 </article>
                 <article>
@@ -219,39 +207,6 @@
               </article>
             </section>
 
-            <section class="notion-block" id="research" aria-labelledby="research-title">
-              <h2 id="research-title" data-en="Papers and Patents">📄 论文与专利</h2>
-              <div class="research-list">
-                <article>
-                  <strong>Inscrypt 2025（CCF-C）</strong>
-                  <p data-en="First author. Details are being organized.">第一作者发表，论文详情整理中。</p>
-                </article>
-                <article>
-                  <strong>IEEE TrustCom（CCF-C）</strong>
-                  <p data-en="Second author. Details are being organized.">第二作者发表，论文详情整理中。</p>
-                </article>
-                <article>
-                  <strong>IPM（CCF-B）</strong>
-                  <p data-en="Student first author, under review.">学生一作投稿，under review。</p>
-                </article>
-              </div>
-
-              <div class="patent-grid">
-                <article>
-                  <strong>一种基于多维变体的敏感词过滤方法和装置</strong>
-                  <span>CN120950675A</span>
-                </article>
-                <article>
-                  <strong>一种基于多模态的敏感词过滤方法和装置</strong>
-                  <span>CN120929593A</span>
-                </article>
-                <article>
-                  <strong>一种网络舆情的预警方法和装置</strong>
-                  <span>CN120931154A</span>
-                </article>
-              </div>
-            </section>
-
             <section class="notion-block" id="competitions" aria-labelledby="competitions-title">
               <h2 id="competitions-title" data-en="Competition Experience">比赛经历</h2>
 
@@ -286,8 +241,8 @@
                     </li>
                   </ul>
                   <div class="case-links">
-                    <a href="https://github.com/gstranded/tgac-2025-proof" data-en="Code and proof repository">
-                      代码与证明仓库
+                    <a href="https://github.com/gstranded/tgac-2025-proof" data-en="Code repository">
+                      代码仓库
                     </a>
                   </div>
                 </div>
@@ -356,29 +311,79 @@
               </article>
             </section>
 
-            <section class="notion-block" id="projects" aria-labelledby="projects-title">
-              <h2 id="projects-title" data-en="Project Snapshot">🗂 项目概览</h2>
-              <div class="notion-table" role="table" aria-label="项目概览">
-                <div role="row">
-                  <strong role="columnheader" data-en="Project">项目</strong>
-                  <strong role="columnheader" data-en="Focus">重点</strong>
-                  <strong role="columnheader" data-en="Result">结果</strong>
-                </div>
-                <div role="row">
-                  <span role="cell" data-en="Voice Agent">语音客服 Agent</span>
-                  <span role="cell" data-en="Workflow orchestration">流程编排</span>
-                  <span role="cell" data-en="Better multi-turn stability">提升多轮稳定性</span>
-                </div>
-                <div role="row">
-                  <span role="cell" data-en="Industry LLM Data">行业大模型数据</span>
-                  <span role="cell" data-en="Data production and cleaning">数据生产与清洗</span>
-                  <span role="cell" data-en="80%+ core-task accuracy">核心任务 80%+</span>
-                </div>
-                <div role="row">
-                  <span role="cell" data-en="LLM Guardrail">大模型保险箍</span>
-                  <span role="cell" data-en="Safety routing">安全路由</span>
-                  <span role="cell" data-en="25%+ latency reduction">时延降低 25%+</span>
-                </div>
+            <section class="notion-block" id="research" aria-labelledby="research-title">
+              <h2 id="research-title" data-en="Papers and Patents">论文与专利</h2>
+              <div class="paper-list">
+                <article class="paper-card">
+                  <figure class="paper-figure">
+                    <img
+                      src="./assets/papers/dyna-ids-framework.png"
+                      alt="DyNA-IDS concept drift adaptation framework"
+                    />
+                  </figure>
+                  <div class="paper-body">
+                    <p class="paper-meta">Inscrypt 2025 · CCF-C</p>
+                    <h3>
+                      <a
+                        href="https://link.springer.com/chapter/10.1007/978-981-95-6203-9_18"
+                        data-en="Revealing the Frailty of Static Benchmarks: The DyNA-IDS Framework for Concept Drift Adaptation in Time-Series Network Intrusion Detection"
+                      >
+                        Revealing the Frailty of Static Benchmarks: The DyNA-IDS Framework for Concept Drift Adaptation in Time-Series Network Intrusion Detection
+                      </a>
+                    </h3>
+                    <p
+                      data-en="This paper studies concept drift in time-series network intrusion detection and proposes DyNA-IDS, a framework that uses short-window and long-window drift signals to trigger adaptive model updates."
+                    >
+                      这篇论文针对时间序列网络入侵检测中的概念漂移问题，提出 DyNA-IDS 框架，用短窗口和长窗口漂移检测触发模型自适应更新，提升动态流量场景下的稳定性。
+                    </p>
+                    <div class="paper-links">
+                      <a
+                        href="https://link.springer.com/chapter/10.1007/978-981-95-6203-9_18"
+                        data-en="Paper link"
+                      >
+                        论文链接
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="paper-card">
+                  <figure class="paper-figure">
+                    <img
+                      src="./assets/papers/bias-redteam-framework.png"
+                      alt="Gender bias red-team campaign framework"
+                    />
+                  </figure>
+                  <div class="paper-body">
+                    <p class="paper-meta">IEEE TrustCom · CCF-C</p>
+                    <h3>
+                      <span data-en="Bias as an Exploit: A Scalable Red-Team Campaign to Uncover Gender-Based Vulnerabilities in Foundational Models">
+                        Bias as an Exploit: A Scalable Red-Team Campaign to Uncover Gender-Based Vulnerabilities in Foundational Models
+                      </span>
+                    </h3>
+                    <p
+                      data-en="This work treats gender bias as an exploitable safety weakness and builds a scalable red-team process based on occupation seed prompts, model filling, repeated querying, and response analysis."
+                    >
+                      这篇工作把性别偏见视作可被系统化利用的安全脆弱点，构建可扩展红队流程，通过职业种子提示、模型补全与再询问来发现基础模型中的性别相关风险。
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <h3 class="section-subtitle" data-en="Published Patents">公开专利</h3>
+              <div class="patent-grid">
+                <article>
+                  <strong>一种基于多维变体的敏感词过滤方法和装置</strong>
+                  <span>CN120950675A</span>
+                </article>
+                <article>
+                  <strong>一种基于多模态的敏感词过滤方法和装置</strong>
+                  <span>CN120929593A</span>
+                </article>
+                <article>
+                  <strong>一种网络舆情的预警方法和装置</strong>
+                  <span>CN120931154A</span>
+                </article>
               </div>
             </section>
 

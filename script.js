@@ -1,7 +1,5 @@
 const year = document.querySelector("#year");
-const navToggle = document.querySelector(".nav-toggle");
-const siteNav = document.querySelector("#site-nav");
-const navLinks = Array.from(document.querySelectorAll(".site-nav a, .notion-subbar a"));
+const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
 const sections = navLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
@@ -54,20 +52,6 @@ const applyLanguage = (lang) => {
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => applyLanguage(button.dataset.lang));
 });
-
-if (navToggle && siteNav) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = siteNav.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      siteNav.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-    });
-  });
-}
 
 const setActiveLink = () => {
   const scrollPosition = window.scrollY + 120;
