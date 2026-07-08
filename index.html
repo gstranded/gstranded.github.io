@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>高海圳 | 在线简历</title>
+    <title>高海圳 | 个人主页</title>
     <meta
       name="description"
       content="高海圳，广州大学大数据技术与工程硕士研究生，关注大模型安全、Agent 系统、行业大模型数据治理和 Text2SQL。"
@@ -17,12 +17,12 @@
       <div class="topbar-left">
         <span class="hamburger" aria-hidden="true">☰</span>
         <a class="workspace-mark" href="#home" aria-label="返回顶部">N</a>
-        <span class="workspace-name" data-en="Personal Resume">在线简历</span>
+        <span class="workspace-name" data-en="Hsunshinez Gao">高海圳</span>
       </div>
 
       <div class="topbar-title">
-        <strong data-en="Online Resume">在线简历</strong>
-        <span data-en="Created by Hsunshinez Gao">由高海圳创建</span>
+        <strong data-en="Personal Homepage">个人主页</strong>
+        <span data-en="LLM Safety · Agent Systems">大模型安全 · Agent 系统</span>
       </div>
 
       <div class="topbar-actions">
@@ -32,21 +32,18 @@
     </header>
 
     <nav class="notion-subbar" aria-label="页面导航">
-      <a href="#home" data-en="Online Resume">📖 在线简历</a>
+      <a href="#home" data-en="Home">高海圳</a>
       <a href="#skills" data-en="Skills">技能描述</a>
       <a href="#experience" data-en="Experience">工作经历</a>
       <a href="#research" data-en="Research">论文专利</a>
-      <a href="#awards" data-en="Awards">竞赛荣誉</a>
+      <a href="#competitions" data-en="Competitions">比赛经历</a>
       <a href="#blog" data-en="Blog">博客</a>
     </nav>
 
     <main id="main" class="notion-page">
       <section class="cover" aria-label="封面图"></section>
 
-      <section class="page-content" id="home" aria-labelledby="page-title">
-        <div class="page-icon" aria-hidden="true">📖</div>
-        <h1 id="page-title" data-en="Online Resume">在线简历</h1>
-
+      <section class="page-content" id="home" aria-label="高海圳个人主页">
         <div class="resume-layout">
           <aside class="profile-column" id="about" aria-label="个人信息">
             <img class="profile-photo" src="./assets/avatar.jpg" alt="高海圳证件照" />
@@ -152,7 +149,7 @@
                 </article>
                 <article>
                   <strong>2nd</strong>
-                  <span data-en="Tencent algorithm contest">腾讯算法竞赛</span>
+                  <span data-en="Competition cases">比赛经历</span>
                 </article>
               </div>
             </section>
@@ -255,48 +252,108 @@
               </div>
             </section>
 
-            <section class="notion-block" id="awards" aria-labelledby="awards-title">
-              <h2 id="awards-title" data-en="Competitions and Honors">🏆 竞赛荣誉</h2>
-              <article class="timeline-item featured">
-                <h3 data-en="TGAC Tencent Games Algorithm Competition">
-                  TGAC 腾讯游戏算法 · 数智决策科学
-                </h3>
-                <p class="meta" data-en="Second Place · Team Leader · 2025">
-                  第二名 ｜ 队长 ｜ 2025
-                </p>
-                <p
-                  data-en="Built a high-quality Text2SQL dataset and improved SQL execution accuracy through SFT and GRPO with StarRocks execution feedback."
-                >
-                  构建高质量 Text2SQL 数据集，结合 SFT 与 GRPO 提升 SQL 执行准确率，并基于 StarRocks 执行反馈完成验证和修正。
-                </p>
+            <section class="notion-block" id="competitions" aria-labelledby="competitions-title">
+              <h2 id="competitions-title" data-en="Competition Experience">比赛经历</h2>
+
+              <article class="competition-case is-featured">
+                <div class="case-copy">
+                  <p class="case-kicker" data-en="Second Place · Team Leader · 2025">
+                    亚军 · 队长 · 2025
+                  </p>
+                  <h3 data-en="TGAC Tencent Games Algorithm Competition · Data-Intelligence Decision Science">
+                    TGAC 腾讯游戏算法大赛 · 数智决策科学赛道
+                  </h3>
+                  <p
+                    data-en="A decision-science competition around business intelligence and SQL reasoning. Our team focused on Text2SQL data construction, supervised fine-tuning, GRPO exploration, and StarRocks execution feedback."
+                  >
+                    腾讯游戏算法大赛面向真实业务决策与智能分析场景。我们围绕 Text2SQL 数据构建、监督微调、GRPO 探索和 StarRocks 执行反馈搭建方案，最终获得赛道亚军。
+                  </p>
+                  <ul>
+                    <li
+                      data-en="Built a high-quality Text2SQL dataset and cleaned ambiguous SQL labels with executable feedback."
+                    >
+                      构建高质量 Text2SQL 数据集，并用可执行反馈清洗歧义 SQL 标注。
+                    </li>
+                    <li
+                      data-en="Used SFT as the stable baseline, then explored GRPO with execution reward for answer correction."
+                    >
+                      以 SFT 作为稳定基线，再探索基于执行奖励的 GRPO 修正答案。
+                    </li>
+                    <li
+                      data-en="Used StarRocks to validate SQL execution, compare result sets, and close the data-model-feedback loop."
+                    >
+                      使用 StarRocks 验证 SQL 执行、比较结果集，并闭合数据、模型、反馈链路。
+                    </li>
+                  </ul>
+                  <div class="case-links">
+                    <a href="https://github.com/gstranded/tgac-2025-proof" data-en="Code and proof repository">
+                      代码与证明仓库
+                    </a>
+                  </div>
+                </div>
+                <div class="proof-gallery tgac-gallery" aria-label="TGAC 证明材料">
+                  <figure class="proof-frame proof-tall">
+                    <img src="./assets/proofs/tgac-trophy.jpg" alt="TGAC 腾讯游戏算法大赛亚军奖杯" />
+                    <figcaption data-en="Second-place trophy">亚军奖杯</figcaption>
+                  </figure>
+                  <figure class="proof-frame">
+                    <img src="./assets/proofs/tgac-certificate.jpg" alt="TGAC 腾讯游戏算法大赛亚军证书" />
+                    <figcaption data-en="Official award certificate">获奖证书</figcaption>
+                  </figure>
+                </div>
               </article>
 
-              <div class="honor-grid">
-                <article>
-                  <strong>3/1543</strong>
-                  <span data-en="Tianchi user purchase behavior prediction">
+              <article class="competition-case">
+                <div class="case-copy">
+                  <p class="case-kicker" data-en="Ranking 3 / 1543 teams · 2025">
+                    第 3 名 / 1543 支队伍 · 2025
+                  </p>
+                  <h3 data-en="Tianchi Geek Challenge · User Purchase Behavior Prediction">
                     天池极客挑战 · 用户购买行为预测
-                  </span>
-                </article>
-                <article>
-                  <strong data-en="Provincial Third Prize">省三等奖</strong>
-                  <span data-en="Lanqiao Cup C/C++ Programming Contest">
-                    蓝桥杯 C/C++ 程序设计
-                  </span>
-                </article>
-                <article>
-                  <strong>2024</strong>
-                  <span data-en="Graduate Academic Second-Class Scholarship">
-                    广州大学硕士研究生学业二等奖学金
-                  </span>
-                </article>
-                <article>
-                  <strong>2025</strong>
-                  <span data-en="Graduate Academic Third-Class Scholarship">
-                    广州大学硕士研究生学业三等奖学金
-                  </span>
-                </article>
-              </div>
+                  </h3>
+                  <p
+                    data-en="The task predicts future purchase behavior from user-item interaction logs. The solution focused on time-window features, user/item/category statistics, temporal validation, and model ensembling."
+                  >
+                    赛题基于用户、商品和行为日志预测后续购买行为。方案重点放在时间窗口特征、用户/商品/类目统计、时序切分验证和模型融合上。
+                  </p>
+                  <ul>
+                    <li data-en="Built behavior-window features for click, collect, cart, and purchase signals.">
+                      围绕点击、收藏、加购、购买等行为构建时间窗口统计特征。
+                    </li>
+                    <li data-en="Used temporal validation to reduce leaderboard overfitting and stabilize offline-online consistency.">
+                      使用时序验证降低榜单过拟合，提升离线与线上表现的一致性。
+                    </li>
+                  </ul>
+                </div>
+                <div class="proof-gallery single-proof" aria-label="天池比赛证明">
+                  <figure class="proof-frame certificate-frame">
+                    <img src="./assets/proofs/tianchi-ranking.jpg" alt="天池极客挑战赛用户购买行为预测排名证书" />
+                    <figcaption data-en="Ranking certificate">排名证书</figcaption>
+                  </figure>
+                </div>
+              </article>
+
+              <article class="competition-case compact-case">
+                <div class="case-copy">
+                  <p class="case-kicker" data-en="Provincial Third Prize · 2022">
+                    省三等奖 · 2022
+                  </p>
+                  <h3 data-en="Lanqiao Cup · C/C++ Programming Contest">
+                    蓝桥杯 · C/C++ 程序设计大学 B 组
+                  </h3>
+                  <p
+                    data-en="A programming contest focused on algorithm implementation and problem solving. I won the provincial third prize in the Guangdong division."
+                  >
+                    面向算法实现与程序设计能力的竞赛，获广东赛区 C/C++ 程序设计大学 B 组省三等奖。
+                  </p>
+                </div>
+                <div class="proof-gallery single-proof small-proof" aria-label="蓝桥杯证明">
+                  <figure class="proof-frame certificate-frame">
+                    <img src="./assets/proofs/lanqiao-certificate.jpg" alt="蓝桥杯省三等奖证书" />
+                    <figcaption data-en="Award certificate">获奖证书</figcaption>
+                  </figure>
+                </div>
+              </article>
             </section>
 
             <section class="notion-block" id="projects" aria-labelledby="projects-title">
@@ -351,7 +408,7 @@
 
     <footer class="site-footer">
       © <span id="year"></span>
-      <span data-en="Hsunshinez Gao · Online Resume">高海圳 · 在线简历</span>
+      <span data-en="Hsunshinez Gao · Personal Homepage">高海圳 · 个人主页</span>
     </footer>
 
     <script src="./script.js"></script>

@@ -204,9 +204,9 @@ a:hover {
 }
 
 .page-content {
-  width: min(960px, calc(100% - 48px));
+  width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 0 0 64px;
+  padding: 48px 0 64px;
 }
 
 .page-icon {
@@ -262,8 +262,8 @@ span {
 
 .resume-layout {
   display: grid;
-  grid-template-columns: 300px minmax(0, 1fr);
-  gap: 56px;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 42px;
   align-items: start;
 }
 
@@ -276,7 +276,7 @@ span {
 
 .profile-photo {
   display: block;
-  width: 100%;
+  width: min(100%, 230px);
   aspect-ratio: 1;
   object-fit: cover;
   object-position: center 16%;
@@ -381,7 +381,8 @@ span {
 }
 
 .number-list,
-.timeline-item ul {
+.timeline-item ul,
+.competition-case ul {
   display: grid;
   gap: 9px;
   margin: 0;
@@ -389,7 +390,8 @@ span {
 }
 
 .number-list li::marker,
-.timeline-item li::marker {
+.timeline-item li::marker,
+.competition-case li::marker {
   color: var(--subtle);
 }
 
@@ -440,6 +442,122 @@ span {
 .meta {
   margin-bottom: 10px;
   font-size: 0.92rem;
+}
+
+.competition-case {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.58fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.competition-case + .competition-case {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.competition-case h3 {
+  margin-bottom: 8px;
+  font-size: 1.22rem;
+}
+
+.competition-case p {
+  margin-bottom: 12px;
+}
+
+.case-kicker {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 28px;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 3px 9px;
+  border: 1px solid rgba(202, 160, 90, 0.36);
+  border-radius: var(--radius);
+  background: rgba(202, 160, 90, 0.09);
+  color: var(--yellow);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.case-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.case-links a {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  padding: 6px 11px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.055);
+  color: var(--text);
+  font-weight: 800;
+}
+
+.case-links a:hover {
+  border-color: rgba(202, 160, 90, 0.5);
+  color: #fff;
+  text-decoration: none;
+}
+
+.proof-gallery {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.tgac-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.single-proof {
+  max-width: 320px;
+  justify-self: end;
+}
+
+.small-proof {
+  max-width: 220px;
+}
+
+.proof-frame {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.proof-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tgac-gallery .proof-frame img {
+  height: 360px;
+  object-fit: cover;
+}
+
+.proof-tall img {
+  object-position: center 46%;
+}
+
+.certificate-frame img {
+  background: #fff;
+}
+
+.proof-frame figcaption {
+  padding: 8px 10px;
+  border-top: 1px solid var(--line);
+  color: var(--subtle);
+  font-size: 0.82rem;
 }
 
 .research-list {
@@ -538,7 +656,7 @@ span {
 }
 
 .site-footer {
-  width: min(960px, calc(100% - 48px));
+  width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
   padding: 8px 0 36px;
   color: var(--subtle);
@@ -570,11 +688,19 @@ span {
   }
 
   .profile-photo {
-    width: min(300px, 100%);
+    width: min(240px, 100%);
   }
 
   .profile-column {
-    max-width: 420px;
+    max-width: 460px;
+  }
+
+  .competition-case {
+    grid-template-columns: 1fr;
+  }
+
+  .single-proof {
+    justify-self: start;
   }
 }
 
@@ -598,8 +724,23 @@ span {
 
   .notion-subbar {
     top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 6px;
+    overflow: visible;
+    white-space: normal;
     min-height: 46px;
-    padding: 0 12px;
+    padding: 8px 10px;
+  }
+
+  .notion-subbar a {
+    justify-content: center;
+    width: 100%;
+    min-height: 34px;
+    padding: 5px 6px;
+    font-size: 0.84rem;
+    white-space: nowrap;
   }
 
   .cover {
@@ -609,6 +750,10 @@ span {
   .page-content,
   .site-footer {
     width: min(100% - 28px, 960px);
+  }
+
+  .page-content {
+    padding-top: 28px;
   }
 
   .page-icon {
@@ -637,6 +782,19 @@ span {
   .blog-list,
   .notion-table > div {
     grid-template-columns: 1fr;
+  }
+
+  .tgac-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tgac-gallery .proof-frame img {
+    height: 245px;
+  }
+
+  .single-proof,
+  .small-proof {
+    max-width: 100%;
   }
 
   .notion-table strong,
