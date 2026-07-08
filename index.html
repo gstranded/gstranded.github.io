@@ -20,6 +20,7 @@
         <a href="#experience" data-en="Experience">工作经历</a>
         <a href="#competitions" data-en="Competitions">比赛经历</a>
         <a href="#research" data-en="Research">论文专利</a>
+        <a href="#portfolio" data-en="Portfolio">作品集</a>
         <a href="#blog" data-en="Blog">博客</a>
       </nav>
       <div class="topbar-actions">
@@ -126,20 +127,6 @@
                 </li>
               </ol>
 
-              <div class="metric-row" aria-label="主页数据">
-                <article>
-                  <strong>2</strong>
-                  <span data-en="Publications/submissions">论文发表/投稿</span>
-                </article>
-                <article>
-                  <strong>3</strong>
-                  <span data-en="Published patents">公开专利</span>
-                </article>
-                <article>
-                  <strong>2nd</strong>
-                  <span data-en="Competition cases">比赛经历</span>
-                </article>
-              </div>
             </section>
 
             <section class="notion-block" id="experience" aria-labelledby="experience-title">
@@ -357,15 +344,26 @@
                   <div class="paper-body">
                     <p class="paper-meta">IEEE TrustCom · CCF-C</p>
                     <h3>
-                      <span data-en="Bias as an Exploit: A Scalable Red-Team Campaign to Uncover Gender-Based Vulnerabilities in Foundational Models">
+                      <a
+                        href="https://www.computer.org/csdl/proceedings-article/trustcom/2025/653200a219/2dMlkHnGbn2"
+                        data-en="Bias as an Exploit: A Scalable Red-Team Campaign to Uncover Gender-Based Vulnerabilities in Foundational Models"
+                      >
                         Bias as an Exploit: A Scalable Red-Team Campaign to Uncover Gender-Based Vulnerabilities in Foundational Models
-                      </span>
+                      </a>
                     </h3>
                     <p
                       data-en="This work treats gender bias as an exploitable safety weakness and builds a scalable red-team process based on occupation seed prompts, model filling, repeated querying, and response analysis."
                     >
                       这篇工作把性别偏见视作可被系统化利用的安全脆弱点，构建可扩展红队流程，通过职业种子提示、模型补全与再询问来发现基础模型中的性别相关风险。
                     </p>
+                    <div class="paper-links">
+                      <a
+                        href="https://www.computer.org/csdl/proceedings-article/trustcom/2025/653200a219/2dMlkHnGbn2"
+                        data-en="Paper link"
+                      >
+                        论文链接
+                      </a>
+                    </div>
                   </div>
                 </article>
               </div>
@@ -385,6 +383,87 @@
                   <span>CN120931154A</span>
                 </article>
               </div>
+            </section>
+
+            <section class="notion-block" id="portfolio" aria-labelledby="portfolio-title">
+              <h2 id="portfolio-title" data-en="GitHub Portfolio">GitHub 作品集</h2>
+              <div class="portfolio-grid">
+                <article class="portfolio-card">
+                  <div class="project-topline">
+                    <span data-en="Python · Data agent">Python · 数据 Agent</span>
+                    <span>★ 1</span>
+                  </div>
+                  <h3>
+                    <a href="https://github.com/gstranded/DataClean-Agent">DataClean-Agent</a>
+                  </h3>
+                  <p
+                    data-en="A FastAPI-based training-data cleaning workbench covering format conversion, deterministic checks, content review, and repair candidate generation."
+                  >
+                    基于 FastAPI 的训练数据清洗工作台，覆盖格式转化、确定性格式检查、内容审查和修复候选生成。
+                  </p>
+                  <a class="project-link" href="https://github.com/gstranded/DataClean-Agent" data-en="View on GitHub">
+                    查看 GitHub
+                  </a>
+                </article>
+
+                <article class="portfolio-card">
+                  <div class="project-topline">
+                    <span data-en="Python · RAG system">Python · RAG 系统</span>
+                    <span>★ 17</span>
+                  </div>
+                  <h3>
+                    <a href="https://github.com/gstranded/RAGLEX">RAGLEX</a>
+                  </h3>
+                  <p
+                    data-en="A legal-domain retrieval-augmented generation Q&A system for fast legal knowledge retrieval and answer generation."
+                  >
+                    法律领域检索增强生成问答系统，面向法律知识检索、问题理解和答案生成，强调高效与准确。
+                  </p>
+                  <a class="project-link" href="https://github.com/gstranded/RAGLEX" data-en="View on GitHub">
+                    查看 GitHub
+                  </a>
+                </article>
+
+                <article class="portfolio-card">
+                  <div class="project-topline">
+                    <span data-en="Rust · Developer tool">Rust · 开发工具</span>
+                    <span>★ 2</span>
+                  </div>
+                  <h3>
+                    <a href="https://github.com/gstranded/codex-switch">codex-switch</a>
+                  </h3>
+                  <p
+                    data-en="A Codex provider switcher with automatic local history sync, built for faster switching across development environments."
+                  >
+                    Codex provider 切换工具，支持自动同步本地历史，用于更快地切换不同开发环境。
+                  </p>
+                  <a class="project-link" href="https://github.com/gstranded/codex-switch" data-en="View on GitHub">
+                    查看 GitHub
+                  </a>
+                </article>
+
+                <article class="portfolio-card">
+                  <div class="project-topline">
+                    <span data-en="TypeScript · Monitoring">TypeScript · 监控系统</span>
+                    <span>★ 3</span>
+                  </div>
+                  <h3>
+                    <a href="https://github.com/gstranded/openclaw-monitor">openclaw-monitor</a>
+                  </h3>
+                  <p
+                    data-en="A front-end and back-end monitoring system built around openclaw multi-agent coordination."
+                  >
+                    围绕 openclaw 多智能体协同开发的监控前后端，用于观察自身运行状态和关键链路。
+                  </p>
+                  <a class="project-link" href="https://github.com/gstranded/openclaw-monitor" data-en="View on GitHub">
+                    查看 GitHub
+                  </a>
+                </article>
+              </div>
+
+              <a class="github-more" href="https://github.com/gstranded" data-en="More projects on GitHub">
+                更多 GitHub 项目
+              </a>
             </section>
 
             <section class="notion-block" id="blog" aria-labelledby="blog-title">
