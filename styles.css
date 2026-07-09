@@ -732,6 +732,49 @@ span {
   margin-top: 14px;
 }
 
+.blog-home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.blog-home-card {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-height: 136px;
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.028);
+  color: var(--muted);
+}
+
+.blog-home-card:hover {
+  border-color: rgba(202, 160, 90, 0.5);
+  background: var(--panel-hover);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.blog-platform {
+  color: var(--yellow);
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.blog-home-card strong {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.42;
+}
+
+.blog-url {
+  overflow-wrap: anywhere;
+  font-size: 0.88rem;
+}
+
 .patent-grid,
 .honor-grid {
   display: grid;
@@ -940,6 +983,7 @@ span {
 
   .patent-grid,
   .honor-grid,
+  .blog-home-grid,
   .portfolio-grid,
   .notion-table > div {
     grid-template-columns: 1fr;
