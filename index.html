@@ -16,13 +16,18 @@
 
     <header class="site-header">
       <nav class="site-nav" aria-label="页面导航">
-        <a href="#home" data-en="Profile">个人信息</a>
-        <a href="#skills" data-en="Skills">技能描述</a>
-        <a href="#experience" data-en="Experience">工作经历</a>
-        <a href="#competitions" data-en="Competitions">比赛经历</a>
-        <a href="#research" data-en="Research">论文专利</a>
-        <a href="#portfolio" data-en="Portfolio">作品集</a>
-        <a href="#blog" data-en="Blog">博客</a>
+        <a href="#home"><span data-en="Profile">个人信息</span></a>
+        <a href="#skills"><span data-en="Skills">技能描述</span></a>
+        <a href="#experience"><span data-en="Experience">工作经历</span></a>
+        <a href="#competitions">
+          <span class="nav-icon" aria-hidden="true">赛</span>
+          <span data-en="Competitions">比赛经历</span>
+        </a>
+        <a href="#research">
+          <span class="nav-icon" aria-hidden="true">文</span>
+          <span data-en="Research">论文专利</span>
+        </a>
+        <a href="#portfolio"><span data-en="Portfolio">作品集</span></a>
       </nav>
       <div class="topbar-actions">
         <button type="button" class="active" data-lang="zh">中文</button>
@@ -195,7 +200,10 @@
             </section>
 
             <section class="notion-block" id="competitions" aria-labelledby="competitions-title">
-              <h2 id="competitions-title" data-en="Competition Experience">比赛经历</h2>
+              <h2 id="competitions-title">
+                <span class="heading-icon" aria-hidden="true">赛</span>
+                <span data-en="Competition Experience">比赛经历</span>
+              </h2>
 
               <article class="competition-case is-featured">
                 <div class="case-copy">
@@ -299,7 +307,10 @@
             </section>
 
             <section class="notion-block" id="research" aria-labelledby="research-title">
-              <h2 id="research-title" data-en="Papers and Patents">论文与专利</h2>
+              <h2 id="research-title">
+                <span class="heading-icon" aria-hidden="true">文</span>
+                <span data-en="Papers and Patents">论文与专利</span>
+              </h2>
               <div class="paper-list">
                 <article class="paper-card">
                   <figure class="paper-figure">
@@ -464,26 +475,6 @@
               <a class="github-more" href="https://github.com/gstranded" data-en="More projects on GitHub">
                 更多 GitHub 项目
               </a>
-            </section>
-
-            <section class="notion-block" id="blog" aria-labelledby="blog-title">
-              <h2 id="blog-title" data-en="Blog">✍️ 博客计划</h2>
-              <div class="blog-list">
-                <article>
-                  <span data-en="Planned">计划中</span>
-                  <h3 data-en="Retrospective on LLM safety guardrails">大模型安全保险箍项目复盘</h3>
-                </article>
-                <article>
-                  <span data-en="Planned">计划中</span>
-                  <h3 data-en="SFT and GRPO in Text2SQL competition">Text2SQL 比赛中的 SFT 与 GRPO</h3>
-                </article>
-                <article>
-                  <span data-en="Planned">计划中</span>
-                  <h3 data-en="Designing data-cleaning agents for industry LLMs">
-                    行业大模型数据清洗 Agent 设计
-                  </h3>
-                </article>
-              </div>
             </section>
           </div>
         </div>

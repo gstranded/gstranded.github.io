@@ -119,11 +119,10 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  min-height: 68px;
-  padding: 10px 28px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(17, 18, 18, 0.88);
-  backdrop-filter: blur(18px);
+  min-height: 70px;
+  padding: 12px 28px;
+  background: linear-gradient(180deg, rgba(16, 17, 17, 0.58), rgba(16, 17, 17, 0));
+  pointer-events: none;
 }
 
 .topbar-actions {
@@ -132,6 +131,15 @@ a:hover {
   justify-content: flex-end;
   justify-self: end;
   gap: 0;
+  padding: 4px;
+  border: 1px solid rgba(240, 239, 237, 0.14);
+  border-radius: 999px;
+  background: rgba(240, 239, 237, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 18px 52px rgba(0, 0, 0, 0.2);
+  pointer-events: auto;
+  backdrop-filter: blur(18px) saturate(130%);
 }
 
 .topbar-actions button {
@@ -160,17 +168,23 @@ a:hover {
   gap: 4px;
   min-width: 0;
   padding: 6px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(240, 239, 237, 0.16);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.045);
+  background: rgba(240, 239, 237, 0.085);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 18px 52px rgba(0, 0, 0, 0.18);
   color: var(--muted);
   font-size: 0.9rem;
+  pointer-events: auto;
+  backdrop-filter: blur(18px) saturate(130%);
 }
 
 .site-nav a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 7px;
   min-height: 36px;
   padding: 0 14px;
   border-radius: 999px;
@@ -182,6 +196,20 @@ a:hover {
   background: var(--panel-hover);
   color: var(--text);
   text-decoration: none;
+}
+
+.nav-icon {
+  display: inline-grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  border: 1px solid rgba(202, 160, 90, 0.35);
+  border-radius: 7px;
+  background: rgba(202, 160, 90, 0.14);
+  color: var(--yellow);
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .notion-page {
@@ -229,6 +257,29 @@ h2 {
   line-height: 1.25;
   letter-spacing: 0;
   font-weight: 850;
+}
+
+.notion-block > h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heading-icon {
+  display: inline-grid;
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid rgba(202, 160, 90, 0.36);
+  border-radius: 10px;
+  background:
+    linear-gradient(145deg, rgba(202, 160, 90, 0.2), rgba(240, 239, 237, 0.05)),
+    rgba(202, 160, 90, 0.08);
+  color: var(--yellow);
+  font-size: 0.9rem;
+  font-weight: 900;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 h3 {
@@ -383,7 +434,6 @@ span {
 
 .patent-grid article,
 .honor-grid article,
-.blog-list article,
 .portfolio-card,
 .featured {
   border: 1px solid var(--line);
@@ -681,36 +731,31 @@ span {
 }
 
 .patent-grid,
-.honor-grid,
-.blog-list {
+.honor-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
   margin-top: 16px;
 }
 
-.honor-grid,
-.blog-list {
+.honor-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .patent-grid article,
-.honor-grid article,
-.blog-list article {
+.honor-grid article {
   padding: 13px;
 }
 
 .patent-grid strong,
-.honor-grid strong,
-.blog-list h3 {
+.honor-grid strong {
   display: block;
   color: var(--text);
   font-size: 0.94rem;
   line-height: 1.48;
 }
 
-.patent-grid span,
-.blog-list span {
+.patent-grid span {
   display: inline-block;
   margin-top: 8px;
   color: var(--yellow);
@@ -722,10 +767,6 @@ span {
   display: block;
   margin-top: 6px;
   font-size: 0.9rem;
-}
-
-.blog-list h3 {
-  margin-bottom: 0;
 }
 
 .notion-table {
@@ -841,22 +882,27 @@ span {
   .site-nav {
     grid-column: 1 / -1;
     grid-row: 2;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: stretch;
+    display: flex;
+    align-items: center;
     gap: 6px;
-    overflow: visible;
-    white-space: normal;
+    overflow-x: auto;
+    white-space: nowrap;
     width: 100%;
     padding: 6px;
-    border-radius: 12px;
+    border-radius: 999px;
+    scrollbar-width: none;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .site-nav a {
+    flex: 0 0 auto;
     justify-content: center;
-    width: 100%;
+    width: auto;
     min-height: 34px;
-    padding: 5px 6px;
+    padding: 5px 10px;
     font-size: 0.84rem;
     white-space: nowrap;
   }
@@ -893,7 +939,6 @@ span {
   .patent-grid,
   .honor-grid,
   .portfolio-grid,
-  .blog-list,
   .notion-table > div {
     grid-template-columns: 1fr;
   }
