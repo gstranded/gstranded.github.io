@@ -135,19 +135,29 @@
                 <h3 data-en="OPPEIN Smart Home Voice Customer-Service Agent">
                   欧派智能家居语音客服 Agent
                 </h3>
-                <p class="meta" data-en="Zhuiyi Technology · Algorithm Researcher · 2026.04 - Now">
-                  追一科技 ｜ 算法研究员 ｜ 2026.04 - 至今
+                <p class="meta" data-en="Zhuiyi Technology · OPPEIN Smart Home Voice Customer-Service Agent · Algorithm Researcher · 2026.04 - Now">
+                  2026-04 ~ 至今 ｜ 追一科技-欧派智能家居语音客服Agent ｜ 算法研究员
+                </p>
+                <p
+                  data-en="For e-commerce voice customer-service lead collection, designed configurable node orchestration and state-transition mechanisms by splitting business nodes, rule nodes, and semantic transfer nodes. The system supports jump answering, pre-answering, regret correction, interruption, and cross-node completion, while optimizing node jumps, semantic routing, and interruption recovery to improve multi-turn dialogue stability, response speed, and collection completion rate."
+                >
+                  面向电商语音客服线索收集场景，设计可配置节点编排与状态流转机制，拆分业务节点、规则节点和语义中转节点，支持跳答、抢答、反悔、打断和跨节点补充等复杂交互；同时优化节点跳转、语义分流和打断恢复链路，提升多轮对话稳定性、响应速度和收集完成率。
                 </p>
                 <ul>
                   <li
-                    data-en="Designed configurable node orchestration and state transition mechanisms for e-commerce voice customer-service lead collection."
+                    data-en="Business workflow orchestration: abstracted opening confirmation, address validation, category confirmation, house status, delivery time, window and door requirements, and salutation collection into executable nodes, with node-level actions, jump conditions, and completion states."
                   >
-                    面向电商语音客服线索收集，设计可配置节点编排与状态流转机制。
+                    业务流程编排：面向语音客服线索收集场景，将开场确认、地址校验、品类确认、房屋状态、交付时间、门窗需求和称呼收集等任务抽象为可执行节点，并设计节点级动作、跳转条件和完成状态，提升多轮业务流程的可控性。
                   </li>
                   <li
-                    data-en="Supported jump answering, interruption recovery, correction, and cross-node information completion."
+                    data-en="Node transition control: designed a hybrid routing mechanism combining rule routing and semantic transfer, supporting parameter hits, multi-level jumps, dynamic branch masking, missed-jump compensation, and fallback recovery."
                   >
-                    支持跳答、抢答、反悔、打断和跨节点补充等复杂多轮交互。
+                    节点流转控制：设计规则路由与语义中转结合的混合跳转机制，支持参数命中、多级跳转、动态分支屏蔽、漏跳补偿和兜底回收，减少跳答、漏答、提前回答等场景下的流程错乱。
+                  </li>
+                  <li
+                    data-en="Regret and interruption optimization: designed rollback and voice-interruption continuation mechanisms, combining historical node rollback, source-node recording, visible-history alignment, and pre-answer judgment to optimize node recovery and continued jumps after interruption."
+                  >
+                    反悔与打断优化：设计反悔回撤与语音打断承接机制，结合历史节点回滚、来源节点记录、可见历史对齐和抢答判断，优化打断后的节点恢复与续跳逻辑，降低重复问询和响应延迟。
                   </li>
                 </ul>
               </article>
@@ -156,38 +166,29 @@
                 <h3 data-en="Industry LLM Data Production and Quality Governance">
                   博文行业大模型数据生产与质量治理建设
                 </h3>
-                <p class="meta" data-en="Zhuiyi Technology · Algorithm Researcher · 2025.03 - 2026.04">
-                  追一科技 ｜ 算法研究员 ｜ 2025.03 - 2026.04
+                <p class="meta" data-en="Zhuiyi Technology · Bowen Industry LLM Data Production and Quality Governance · Algorithm Researcher · 2025.03 - 2026.04">
+                  2025-03 ~ 2026-04 ｜ 追一科技-博文行业大模型数据生产与质量治理建设 ｜ 算法研究员
+                </p>
+                <p
+                  data-en="For Bowen industry LLM training, built a full closed loop from data production and quality cleaning to model training, supporting multi-capability training for question rewriting, entity extraction, safe refusal, process-intent recognition, and business-intent selection. Also developed data production and cleaning agents to improve data-generation efficiency and training-data quality."
+                >
+                  面向博文行业大模型训练需求，构建从数据生产、质量清洗到模型训练的完整闭环，支撑问题改写、实体提取、安全拒识、流程意图识别和业务意图选择等多能力融合训练，并沉淀数据生产Agent与数据清洗Agent，提升数据生成效率和训练数据质量。
                 </p>
                 <ul>
                   <li
-                    data-en="Built a closed-loop pipeline from data production and quality cleaning to model training."
+                    data-en="Data production agent: designed a multi-task data production agent that automatically generates training and test samples for question rewriting, entity extraction, safe refusal, process intent, and business intent."
                   >
-                    构建从数据生产、质量清洗到模型训练的完整闭环。
+                    数据生产Agent：设计多任务数据生产Agent，面向问题改写、实体提取、安全拒识、流程意图和业务意图等能力自动生成训练与测试样本，提升数据生产效率与场景覆盖度。
                   </li>
                   <li
-                    data-en="Trained a 4B industry LLM and built a vLLM inference evaluation pipeline, reaching 80%+ accuracy on core tasks."
+                    data-en="Data cleaning agent: built a data-cleaning workflow based on agent error attribution and deterministic tool repair, separating format and semantic issues, then using rule tools for structural fixes and agent review for semantic consistency and business boundaries."
                   >
-                    基于清洗数据训练博文 4B 行业大模型，并用 vLLM 搭建评测链路，核心任务准确率达到 80%+。
-                  </li>
-                </ul>
-              </article>
-
-              <article class="timeline-item">
-                <h3 data-en="LLM Safety Guardrail System">大模型保险箍</h3>
-                <p class="meta" data-en="Peng Cheng Laboratory · Core Algorithm Researcher · 2024.10 - 2025.10">
-                  鹏城国家实验室 ｜ 核心算法研究员 ｜ 2024.10 - 2025.10
-                </p>
-                <ul>
-                  <li
-                    data-en="Built a bidirectional content safety system for LLM inputs and outputs with layered review and dynamic routing."
-                  >
-                    面向大模型输入输出安全，构建分层审核与动态调度机制。
+                    数据清洗 Agent：构建基于Agent错误归因+确定性工具修复的数据清洗流程，将问题拆分为格式类与语义类，分别通过规则工具修复结构问题、由Agent审查语义一致性与业务边界，降低标签错误、答非所问和拒识边界不准等问题。
                   </li>
                   <li
-                    data-en="Reduced high-cost component calls by 35%+ and average latency by 25%+."
+                    data-en="Model training iteration: trained the Bowen 4B industry LLM on cleaned high-quality data and built an inference evaluation pipeline with vLLM, reaching 80%+ accuracy on core tasks such as entity extraction and intent selection."
                   >
-                    高成本组件调用占比下降 35%+，平均时延降低 25%+。
+                    模型训练迭代：基于清洗后的高质量数据训练博文4B行业大模型，并使用vLLM搭建推理评测链路，在实体提取、意图选择等核心任务上准确率达到80%+
                   </li>
                 </ul>
               </article>
