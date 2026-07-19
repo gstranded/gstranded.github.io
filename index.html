@@ -12,522 +12,468 @@
   </head>
   <body>
     <a class="skip-link" href="#main">跳至内容</a>
-    <canvas class="particle-canvas" id="particle-canvas" aria-hidden="true"></canvas>
 
-    <header class="site-header">
-      <nav class="site-nav" aria-label="页面导航">
-        <a href="#home"><span data-en="Profile">个人信息</span></a>
-        <a href="#skills"><span data-en="Skills">技能描述</span></a>
-        <a href="#experience"><span data-en="Experience">工作经历</span></a>
-        <a href="#competitions"><span data-en="Competitions">比赛经历</span></a>
-        <a href="#portfolio"><span data-en="Portfolio">作品集</span></a>
-        <a href="#research"><span data-en="Research">论文专利</span></a>
-        <a href="#blog"><span data-en="Blog">博客</span></a>
-      </nav>
-      <div class="topbar-actions">
+    <header class="site-header" aria-label="页面设置">
+      <div class="topbar-actions" aria-label="语言切换">
         <button type="button" class="active" data-lang="zh">中文</button>
         <button type="button" data-lang="en">EN</button>
       </div>
     </header>
 
-    <main id="main" class="notion-page">
-      <section class="page-content" id="home" aria-label="高海圳个人主页">
-        <div class="resume-layout">
-          <aside class="profile-column" id="about" aria-label="个人信息">
-            <img class="profile-photo" src="./assets/avatar.jpg" alt="高海圳证件照" />
+    <main id="main" class="page-shell">
+      <section class="hero" id="home" aria-label="高海圳个人主页">
+        <div class="hero-inner">
+          <img class="profile-photo" src="./assets/avatar.jpg" alt="高海圳证件照" />
 
-            <section class="notion-block profile-card">
-              <h2 data-en="Hsunshinez Gao">高海圳</h2>
-              <p
-                class="role-line"
-                data-en="LLM Safety · Agent Systems · Data Governance"
-              >
-                大模型安全 · Agent 系统 · 数据治理
-              </p>
-              <p
-                data-en="Master's student in Big Data Technology and Engineering at Guangzhou University. Advisor: Jiayin Qi. Fang Binxing academician team."
-              >
-                广州大学大数据技术与工程硕士研究生，导师齐佳音，方滨兴院士团队。
-              </p>
-            </section>
+          <div class="hero-copy">
+            <p class="page-label" data-en="PERSONAL HOMEPAGE">个人主页</p>
+            <h1>
+              <span data-en="Hsunshinez Gao">高海圳</span>
+            </h1>
+            <p
+              class="hero-title"
+              data-en="M.Eng. student in Big Data Technology and Engineering, School of Cyberspace Security, Guangzhou University"
+            >
+              广州大学网络空间安全学院大数据技术与工程硕士研究生
+            </p>
+            <p
+              class="hero-summary"
+              data-en="Focused on LLM safety, agent systems, data governance, Text2SQL, and deployable AI applications."
+            >
+              关注大模型安全、Agent 系统、数据治理、Text2SQL 和可落地的 AI 应用开发。
+            </p>
 
-            <section class="notion-block" id="contact" aria-labelledby="contact-title">
-              <h2 id="contact-title" data-en="Contact Me">联系我</h2>
-              <ul class="contact-list">
-                <li><span>Email</span><a href="mailto:hsunshinez@163.com">hsunshinez@163.com</a></li>
-                <li><span>GitHub</span><a href="https://github.com/gstranded">github.com/gstranded</a></li>
-                <li><span data-en="Resume">简历</span><a href="mailto:hsunshinez@163.com" data-en="Request by email">邮件索取</a></li>
-              </ul>
-              <p class="quiet" data-en="The public page does not show my phone number.">
-                公开页面不展示手机号。
-              </p>
-            </section>
+            <nav class="site-nav" aria-label="页面导航">
+              <a href="#about"><span data-en="Profile">个人简介</span></a>
+              <a href="#competitions"><span data-en="Competitions">比赛经历</span></a>
+              <a href="#portfolio"><span data-en="Projects">项目</span></a>
+              <a href="#research"><span data-en="Papers">论文专利</span></a>
+              <a href="#experience"><span data-en="Experience">工作经历</span></a>
+              <a href="#skills"><span data-en="Skills">技能</span></a>
+              <a href="#blog"><span data-en="Blog">博客</span></a>
+            </nav>
 
-            <section class="notion-block" aria-labelledby="edu-title">
-              <h2 id="edu-title" data-en="Education">教育经历</h2>
-              <div class="mini-item">
-                <strong data-en="Guangzhou University">广州大学</strong>
-                <p
-                  data-en="M.Eng. in Big Data Technology and Engineering, 2024.09 - 2027.06. GPA 3.96/5.00, top 10%."
-                >
-                  大数据技术与工程硕士，2024.09 - 2027.06，GPA 3.96/5.00，前 10%。
-                </p>
-              </div>
-              <div class="mini-item">
-                <strong data-en="Guangdong Polytechnic Normal University">
-                  广东技术师范大学
-                </strong>
-                <p
-                  data-en="B.Eng. in Cyberspace Security, 2020.09 - 2024.06. GPA 3.69/5.00, top 10%."
-                >
-                  网络空间安全本科，2020.09 - 2024.06，GPA 3.69/5.00，前 10%。
-                </p>
-              </div>
-            </section>
-
-            <section class="notion-block" aria-labelledby="focus-title">
-              <h2 id="focus-title" data-en="Focus">研究方向</h2>
-              <div class="tag-list">
-                <span data-en="LLM Safety">大模型安全</span>
-                <span data-en="Agent Engineering">Agent 工程</span>
-                <span data-en="Data Governance">数据治理</span>
-                <span>Text2SQL</span>
-                <span>RAG</span>
-              </div>
-            </section>
-          </aside>
-
-          <div class="content-column">
-            <section class="notion-block intro-line">
-              <p
-                data-en="I build LLM systems that can be measured, deployed, and iterated in real scenarios. My recent work focuses on safety review pipelines, voice customer-service agents, data production agents, and SQL execution feedback."
-              >
-                我更关注可评测、可部署、可持续迭代的大模型系统。近期工作主要围绕安全审核链路、语音客服 Agent、数据生产 Agent 和 SQL 执行反馈展开。
-              </p>
-            </section>
-
-            <section class="notion-block" id="skills" aria-labelledby="skills-title">
-              <h2 id="skills-title" data-en="Skill Summary">🧱 技能描述</h2>
-              <ol class="number-list">
-                <li
-                  data-en="Build agent workflows for multi-turn business conversations, including node orchestration, semantic routing, interruption recovery, and fallback handling."
-                >
-                  面向多轮业务对话构建 Agent 工作流，覆盖节点编排、语义路由、打断恢复和兜底回收。
-                </li>
-                <li
-                  data-en="Develop data production and data cleaning agents for industry LLM training, combining agent review with deterministic repair tools."
-                >
-                  构建行业大模型训练用的数据生产与清洗 Agent，将 Agent 审查与确定性工具修复结合。
-                </li>
-                <li
-                  data-en="Work with SFT/LoRA, vLLM inference evaluation, RAG-enhanced filtering, and cost-aware model routing."
-                >
-                  熟悉 SFT/LoRA、vLLM 推理评测、RAG 增强过滤和成本感知模型路由。
-                </li>
-              </ol>
-
-            </section>
-
-            <section class="notion-block" id="experience" aria-labelledby="experience-title">
-              <h2 id="experience-title" data-en="Experience">💼 工作经历</h2>
-
-              <article class="timeline-item">
-                <h3 data-en="OPPEIN Smart Home Voice Customer-Service Agent">
-                  欧派智能家居语音客服 Agent
-                </h3>
-                <p class="meta" data-en="Zhuiyi Technology · OPPEIN Smart Home Voice Customer-Service Agent · Algorithm Researcher · 2026.04 - Now">
-                  2026-04 ~ 至今 ｜ 追一科技-欧派智能家居语音客服Agent ｜ 算法研究员
-                </p>
-                <p
-                  data-en="For e-commerce voice customer-service lead collection, designed configurable node orchestration and state-transition mechanisms by splitting business nodes, rule nodes, and semantic transfer nodes. The system supports jump answering, pre-answering, regret correction, interruption, and cross-node completion, while optimizing node jumps, semantic routing, and interruption recovery to improve multi-turn dialogue stability, response speed, and collection completion rate."
-                >
-                  面向电商语音客服线索收集场景，设计可配置节点编排与状态流转机制，拆分业务节点、规则节点和语义中转节点，支持跳答、抢答、反悔、打断和跨节点补充等复杂交互；同时优化节点跳转、语义分流和打断恢复链路，提升多轮对话稳定性、响应速度和收集完成率。
-                </p>
-                <ul>
-                  <li
-                    data-en="Business workflow orchestration: abstracted opening confirmation, address validation, category confirmation, house status, delivery time, window and door requirements, and salutation collection into executable nodes, with node-level actions, jump conditions, and completion states."
-                  >
-                    业务流程编排：面向语音客服线索收集场景，将开场确认、地址校验、品类确认、房屋状态、交付时间、门窗需求和称呼收集等任务抽象为可执行节点，并设计节点级动作、跳转条件和完成状态，提升多轮业务流程的可控性。
-                  </li>
-                  <li
-                    data-en="Node transition control: designed a hybrid routing mechanism combining rule routing and semantic transfer, supporting parameter hits, multi-level jumps, dynamic branch masking, missed-jump compensation, and fallback recovery."
-                  >
-                    节点流转控制：设计规则路由与语义中转结合的混合跳转机制，支持参数命中、多级跳转、动态分支屏蔽、漏跳补偿和兜底回收，减少跳答、漏答、提前回答等场景下的流程错乱。
-                  </li>
-                  <li
-                    data-en="Regret and interruption optimization: designed rollback and voice-interruption continuation mechanisms, combining historical node rollback, source-node recording, visible-history alignment, and pre-answer judgment to optimize node recovery and continued jumps after interruption."
-                  >
-                    反悔与打断优化：设计反悔回撤与语音打断承接机制，结合历史节点回滚、来源节点记录、可见历史对齐和抢答判断，优化打断后的节点恢复与续跳逻辑，降低重复问询和响应延迟。
-                  </li>
-                </ul>
-              </article>
-
-              <article class="timeline-item">
-                <h3 data-en="Industry LLM Data Production and Quality Governance">
-                  博文行业大模型数据生产与质量治理建设
-                </h3>
-                <p class="meta" data-en="Zhuiyi Technology · Bowen Industry LLM Data Production and Quality Governance · Algorithm Researcher · 2025.03 - 2026.04">
-                  2025-03 ~ 2026-04 ｜ 追一科技-博文行业大模型数据生产与质量治理建设 ｜ 算法研究员
-                </p>
-                <p
-                  data-en="For Bowen industry LLM training, built a full closed loop from data production and quality cleaning to model training, supporting multi-capability training for question rewriting, entity extraction, safe refusal, process-intent recognition, and business-intent selection. Also developed data production and cleaning agents to improve data-generation efficiency and training-data quality."
-                >
-                  面向博文行业大模型训练需求，构建从数据生产、质量清洗到模型训练的完整闭环，支撑问题改写、实体提取、安全拒识、流程意图识别和业务意图选择等多能力融合训练，并沉淀数据生产Agent与数据清洗Agent，提升数据生成效率和训练数据质量。
-                </p>
-                <ul>
-                  <li
-                    data-en="Data production agent: designed a multi-task data production agent that automatically generates training and test samples for question rewriting, entity extraction, safe refusal, process intent, and business intent."
-                  >
-                    数据生产Agent：设计多任务数据生产Agent，面向问题改写、实体提取、安全拒识、流程意图和业务意图等能力自动生成训练与测试样本，提升数据生产效率与场景覆盖度。
-                  </li>
-                  <li
-                    data-en="Data cleaning agent: built a data-cleaning workflow based on agent error attribution and deterministic tool repair, separating format and semantic issues, then using rule tools for structural fixes and agent review for semantic consistency and business boundaries."
-                  >
-                    数据清洗 Agent：构建基于Agent错误归因+确定性工具修复的数据清洗流程，将问题拆分为格式类与语义类，分别通过规则工具修复结构问题、由Agent审查语义一致性与业务边界，降低标签错误、答非所问和拒识边界不准等问题。
-                  </li>
-                  <li
-                    data-en="Model training iteration: trained the Bowen 4B industry LLM on cleaned high-quality data and built an inference evaluation pipeline with vLLM, reaching 80%+ accuracy on core tasks such as entity extraction and intent selection."
-                  >
-                    模型训练迭代：基于清洗后的高质量数据训练博文4B行业大模型，并使用vLLM搭建推理评测链路，在实体提取、意图选择等核心任务上准确率达到80%+
-                  </li>
-                </ul>
-              </article>
-            </section>
-
-            <section class="notion-block" id="competitions" aria-labelledby="competitions-title">
-              <h2 id="competitions-title">
-                <span class="heading-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" focusable="false">
-                    <path d="M8 4h8v3.5c0 3.2-1.7 5.3-4 6.1-2.3-.8-4-2.9-4-6.1V4Z" />
-                    <path d="M8 6H5.5C5.5 9.1 6.9 11 9 11.7" />
-                    <path d="M16 6h2.5c0 3.1-1.4 5-3.5 5.7" />
-                    <path d="M12 13.6V17" />
-                    <path d="M9 20h6" />
-                    <path d="M10 17h4l1 3H9l1-3Z" />
-                  </svg>
-                </span>
-                <span data-en="Competition Experience">比赛经历</span>
-              </h2>
-
-              <article class="competition-case is-featured">
-                <div class="case-copy">
-                  <p class="case-kicker" data-en="Second Place · Team Leader · 2025">
-                    亚军 · 队长 · 2025
-                  </p>
-                  <h3 data-en="TGAC Tencent Games Algorithm Competition · Data-Intelligence Decision Science">
-                    TGAC 腾讯游戏算法大赛 · 数智决策科学赛道
-                  </h3>
-                  <p
-                    data-en="A decision-science competition around business intelligence and SQL reasoning. Our team focused on Text2SQL data construction, supervised fine-tuning, GRPO exploration, and StarRocks execution feedback."
-                  >
-                    腾讯游戏算法大赛面向真实业务决策与智能分析场景。我们围绕 Text2SQL 数据构建、监督微调、GRPO 探索和 StarRocks 执行反馈搭建方案，最终获得赛道亚军。
-                  </p>
-                  <ul>
-                    <li
-                      data-en="Built a high-quality Text2SQL dataset and cleaned ambiguous SQL labels with executable feedback."
-                    >
-                      构建高质量 Text2SQL 数据集，并用可执行反馈清洗歧义 SQL 标注。
-                    </li>
-                    <li
-                      data-en="Used SFT as the stable baseline, then explored GRPO with execution reward for answer correction."
-                    >
-                      以 SFT 作为稳定基线，再探索基于执行奖励的 GRPO 修正答案。
-                    </li>
-                    <li
-                      data-en="Used StarRocks to validate SQL execution, compare result sets, and close the data-model-feedback loop."
-                    >
-                      使用 StarRocks 验证 SQL 执行、比较结果集，并闭合数据、模型、反馈链路。
-                    </li>
-                  </ul>
-                  <div class="case-links">
-                    <a href="https://github.com/gstranded/tgac-2025-proof" data-en="Code repository">
-                      代码仓库
-                    </a>
-                  </div>
-                </div>
-                <div class="proof-gallery tgac-gallery" aria-label="TGAC 证明材料">
-                  <figure class="proof-frame proof-tall">
-                    <img src="./assets/proofs/tgac-trophy.jpg" alt="TGAC 腾讯游戏算法大赛亚军奖杯" />
-                    <figcaption data-en="Second-place trophy">亚军奖杯</figcaption>
-                  </figure>
-                  <figure class="proof-frame">
-                    <img src="./assets/proofs/tgac-certificate.jpg" alt="TGAC 腾讯游戏算法大赛亚军证书" />
-                    <figcaption data-en="Official award certificate">获奖证书</figcaption>
-                  </figure>
-                </div>
-              </article>
-
-              <article class="competition-case">
-                <div class="case-copy">
-                  <p class="case-kicker" data-en="Ranking 3 / 1543 teams · 2025">
-                    第 3 名 / 1543 支队伍 · 2025
-                  </p>
-                  <h3 data-en="Tianchi Geek Challenge · User Purchase Behavior Prediction">
-                    天池极客挑战 · 用户购买行为预测
-                  </h3>
-                  <p
-                    data-en="The task predicts future purchase behavior from user-item interaction logs. The solution focused on time-window features, user/item/category statistics, temporal validation, and model ensembling."
-                  >
-                    赛题基于用户、商品和行为日志预测后续购买行为。方案重点放在时间窗口特征、用户/商品/类目统计、时序切分验证和模型融合上。
-                  </p>
-                  <ul>
-                    <li data-en="Built behavior-window features for click, collect, cart, and purchase signals.">
-                      围绕点击、收藏、加购、购买等行为构建时间窗口统计特征。
-                    </li>
-                    <li data-en="Used temporal validation to reduce leaderboard overfitting and stabilize offline-online consistency.">
-                      使用时序验证降低榜单过拟合，提升离线与线上表现的一致性。
-                    </li>
-                  </ul>
-                </div>
-                <div class="proof-gallery single-proof" aria-label="天池比赛证明">
-                  <figure class="proof-frame certificate-frame">
-                    <img src="./assets/proofs/tianchi-ranking.jpg" alt="天池极客挑战赛用户购买行为预测排名证书" />
-                    <figcaption data-en="Ranking certificate">排名证书</figcaption>
-                  </figure>
-                </div>
-              </article>
-
-              <article class="competition-case compact-case">
-                <div class="case-copy">
-                  <p class="case-kicker" data-en="Provincial Third Prize · 2022">
-                    省三等奖 · 2022
-                  </p>
-                  <h3 data-en="Lanqiao Cup · C/C++ Programming Contest">
-                    蓝桥杯 · C/C++ 程序设计大学 B 组
-                  </h3>
-                  <p
-                    data-en="A programming contest focused on algorithm implementation and problem solving. I won the provincial third prize in the Guangdong division."
-                  >
-                    面向算法实现与程序设计能力的竞赛，获广东赛区 C/C++ 程序设计大学 B 组省三等奖。
-                  </p>
-                </div>
-                <div class="proof-gallery single-proof small-proof" aria-label="蓝桥杯证明">
-                  <figure class="proof-frame certificate-frame">
-                    <img src="./assets/proofs/lanqiao-certificate.jpg" alt="蓝桥杯省三等奖证书" />
-                    <figcaption data-en="Award certificate">获奖证书</figcaption>
-                  </figure>
-                </div>
-              </article>
-            </section>
-
-            <section class="notion-block" id="portfolio" aria-labelledby="portfolio-title">
-              <h2 id="portfolio-title">
-                <span class="heading-icon" aria-hidden="true">
-                  <svg class="github-mark" viewBox="0 0 24 24" focusable="false">
-                    <path d="M12 .3c-6.6 0-12 5.4-12 12 0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.8-1.6 8.2-6.1 8.2-11.4 0-6.6-5.4-12-12-12Z" />
-                  </svg>
-                </span>
-                <span data-en="GitHub Portfolio">GitHub 作品集</span>
-              </h2>
-              <div class="portfolio-grid">
-                <article class="portfolio-card">
-                  <div class="project-topline">
-                    <span data-en="Python · RAG system">Python · RAG 系统</span>
-                    <span>★ 17</span>
-                  </div>
-                  <h3>
-                    <a href="https://github.com/gstranded/RAGLEX">RAGLEX</a>
-                  </h3>
-                  <p
-                    data-en="A legal-domain retrieval-augmented generation Q&A system for fast legal knowledge retrieval and answer generation."
-                  >
-                    法律领域检索增强生成问答系统，面向法律知识检索、问题理解和答案生成，强调高效与准确。
-                  </p>
-                  <a class="project-link" href="https://github.com/gstranded/RAGLEX" data-en="View on GitHub">
-                    查看 GitHub
-                  </a>
-                </article>
-
-                <article class="portfolio-card">
-                  <div class="project-topline">
-                    <span data-en="TypeScript · Monitoring">TypeScript · 监控系统</span>
-                    <span>★ 3</span>
-                  </div>
-                  <h3>
-                    <a href="https://github.com/gstranded/openclaw-monitor">openclaw-monitor</a>
-                  </h3>
-                  <p
-                    data-en="A front-end and back-end monitoring system built around openclaw multi-agent coordination."
-                  >
-                    围绕 openclaw 多智能体协同开发的监控前后端，用于观察自身运行状态和关键链路。
-                  </p>
-                  <a class="project-link" href="https://github.com/gstranded/openclaw-monitor" data-en="View on GitHub">
-                    查看 GitHub
-                  </a>
-                </article>
-
-                <article class="portfolio-card">
-                  <div class="project-topline">
-                    <span data-en="Rust · Developer tool">Rust · 开发工具</span>
-                    <span>★ 2</span>
-                  </div>
-                  <h3>
-                    <a href="https://github.com/gstranded/codex-switch">codex-switch</a>
-                  </h3>
-                  <p
-                    data-en="A Codex provider switcher with automatic local history sync, built for faster switching across development environments."
-                  >
-                    Codex provider 切换工具，支持自动同步本地历史，用于更快地切换不同开发环境。
-                  </p>
-                  <a class="project-link" href="https://github.com/gstranded/codex-switch" data-en="View on GitHub">
-                    查看 GitHub
-                  </a>
-                </article>
-
-                <article class="portfolio-card">
-                  <div class="project-topline">
-                    <span data-en="Python · Data agent">Python · 数据 Agent</span>
-                    <span>★ 1</span>
-                  </div>
-                  <h3>
-                    <a href="https://github.com/gstranded/DataClean-Agent">DataClean-Agent</a>
-                  </h3>
-                  <p
-                    data-en="A FastAPI-based training-data cleaning workbench covering format conversion, deterministic checks, content review, and repair candidate generation."
-                  >
-                    基于 FastAPI 的训练数据清洗工作台，覆盖格式转化、确定性格式检查、内容审查和修复候选生成。
-                  </p>
-                  <a class="project-link" href="https://github.com/gstranded/DataClean-Agent" data-en="View on GitHub">
-                    查看 GitHub
-                  </a>
-                </article>
-              </div>
-
-              <a class="github-more" href="https://github.com/gstranded" data-en="More projects on GitHub">
-                更多 GitHub 项目
-              </a>
-            </section>
-
-            <section class="notion-block" id="research" aria-labelledby="research-title">
-              <h2 id="research-title">
-                <span class="heading-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" focusable="false">
-                    <path d="M7 3h7l4 4v14H7V3Z" />
-                    <path d="M14 3v5h5" />
-                    <path d="M10 12h6" />
-                    <path d="M10 16h5" />
-                  </svg>
-                </span>
-                <span data-en="Papers and Patents">论文与专利</span>
-              </h2>
-              <div class="paper-list">
-                <article class="paper-card">
-                  <figure class="paper-figure">
-                    <img
-                      src="./assets/papers/dyna-ids-framework.png"
-                      alt="DyNA-IDS concept drift adaptation framework"
-                    />
-                  </figure>
-                  <div class="paper-body">
-                    <p class="paper-meta">Inscrypt 2025 · CCF-C</p>
-                    <h3>
-                      <a
-                        href="https://link.springer.com/chapter/10.1007/978-981-95-6203-9_18"
-                        data-en="Revealing the Frailty of Static Benchmarks: The DyNA-IDS Framework for Concept Drift Adaptation in Time-Series Network Intrusion Detection"
-                      >
-                        Revealing the Frailty of Static Benchmarks: The DyNA-IDS Framework for Concept Drift Adaptation in Time-Series Network Intrusion Detection
-                      </a>
-                    </h3>
-                    <p
-                      data-en="This paper studies concept drift in time-series network intrusion detection and proposes DyNA-IDS, a framework that uses short-window and long-window drift signals to trigger adaptive model updates."
-                    >
-                      这篇论文针对时间序列网络入侵检测中的概念漂移问题，提出 DyNA-IDS 框架，用短窗口和长窗口漂移检测触发模型自适应更新，提升动态流量场景下的稳定性。
-                    </p>
-                    <div class="paper-links">
-                      <a
-                        href="https://link.springer.com/chapter/10.1007/978-981-95-6203-9_18"
-                        data-en="Paper link"
-                      >
-                        论文链接
-                      </a>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="paper-card">
-                  <figure class="paper-figure">
-                    <img
-                      src="./assets/papers/bias-redteam-framework.png"
-                      alt="Gender bias red-team campaign framework"
-                    />
-                  </figure>
-                  <div class="paper-body">
-                    <p class="paper-meta">IEEE TrustCom · CCF-C</p>
-                    <h3>
-                      <a
-                        href="https://www.computer.org/csdl/proceedings-article/trustcom/2025/653200a219/2dMlkHnGbn2"
-                        data-en="Bias as an Exploit: A Scalable Red-Team Campaign to Uncover Gender-Based Vulnerabilities in Foundational Models"
-                      >
-                        Bias as an Exploit: A Scalable Red-Team Campaign to Uncover Gender-Based Vulnerabilities in Foundational Models
-                      </a>
-                    </h3>
-                    <p
-                      data-en="This work treats gender bias as an exploitable safety weakness and builds a scalable red-team process based on occupation seed prompts, model filling, repeated querying, and response analysis."
-                    >
-                      这篇工作把性别偏见视作可被系统化利用的安全脆弱点，构建可扩展红队流程，通过职业种子提示、模型补全与再询问来发现基础模型中的性别相关风险。
-                    </p>
-                    <div class="paper-links">
-                      <a
-                        href="https://www.computer.org/csdl/proceedings-article/trustcom/2025/653200a219/2dMlkHnGbn2"
-                        data-en="Paper link"
-                      >
-                        论文链接
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <h3 class="section-subtitle" data-en="Published Patents">公开专利</h3>
-              <div class="patent-grid">
-                <article>
-                  <strong>一种基于多维变体的敏感词过滤方法和装置</strong>
-                  <span>CN120950675A</span>
-                </article>
-                <article>
-                  <strong>一种基于多模态的敏感词过滤方法和装置</strong>
-                  <span>CN120929593A</span>
-                </article>
-                <article>
-                  <strong>一种网络舆情的预警方法和装置</strong>
-                  <span>CN120931154A</span>
-                </article>
-              </div>
-            </section>
-
-            <section class="notion-block" id="blog" aria-labelledby="blog-title">
-              <h2 id="blog-title">
-                <span class="heading-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" focusable="false">
-                    <path d="M6 4.75h8.25A3.75 3.75 0 0 1 18 8.5v10.75H9.75A3.75 3.75 0 0 0 6 23V4.75Z" />
-                    <path d="M6 4.75H4.75A2.75 2.75 0 0 0 2 7.5v11.75h4" />
-                    <path d="M9 9h6" />
-                    <path d="M9 13h5" />
-                  </svg>
-                </span>
-                <span data-en="Blog Homepages">博客主页</span>
-              </h2>
-              <div class="blog-home-grid">
-                <a class="blog-home-card" href="https://blog.csdn.net/m0_52701251" target="_blank" rel="noopener noreferrer">
-                  <span class="blog-platform" data-en="CSDN Blog">CSDN 博客</span>
-                  <strong data-en="Algorithm notes and AI engineering records">算法笔记、AI 实践和技术记录</strong>
-                  <span class="blog-url">blog.csdn.net/m0_52701251</span>
-                </a>
-                <a class="blog-home-card" href="https://www.cnblogs.com/gstranded" target="_blank" rel="noopener noreferrer">
-                  <span class="blog-platform" data-en="Cnblogs">博客园</span>
-                  <strong data-en="Project reviews and long-form write-ups">项目复盘、工程实践和长文归档</strong>
-                  <span class="blog-url">cnblogs.com/gstranded</span>
-                </a>
-              </div>
-            </section>
+            <p class="contact-line">
+              <a href="mailto:hsunshinez@163.com">hsunshinez@163.com</a>
+              <span>/</span>
+              <a href="https://github.com/gstranded" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <span>/</span>
+              <span data-en="Guangzhou, China">广州，中国</span>
+              <span>/</span>
+              <span data-en="Advisor: Jiayin Qi">导师：齐佳音</span>
+            </p>
           </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="about" aria-labelledby="about-title">
+        <h2 id="about-title" data-en="Profile">个人简介</h2>
+        <div class="prose-block">
+          <p
+            data-en="I am a master's student in Big Data Technology and Engineering at Guangzhou University, advised by Prof. Jiayin Qi in the Fang Binxing academician team."
+          >
+            我是广州大学大数据技术与工程硕士研究生，导师为齐佳音老师，所在团队为方滨兴院士团队。
+          </p>
+          <p
+            data-en="My recent work focuses on measurable and deployable LLM systems, including safety review pipelines, voice customer-service agents, data production agents, and SQL execution feedback."
+          >
+            我更关注可评测、可部署、可持续迭代的大模型系统，近期工作主要围绕安全审核链路、语音客服 Agent、数据生产 Agent 和 SQL 执行反馈展开。
+          </p>
+        </div>
+
+        <div class="fact-grid">
+          <article>
+            <h3 data-en="Education">教育经历</h3>
+            <p
+              data-en="Guangzhou University, M.Eng. in Big Data Technology and Engineering, 2024.09 - 2027.06. GPA 3.96/5.00, top 10%."
+            >
+              广州大学，大数据技术与工程硕士，2024.09 - 2027.06，GPA 3.96/5.00，前 10%。
+            </p>
+            <p
+              data-en="Guangdong Polytechnic Normal University, B.Eng. in Cyberspace Security, 2020.09 - 2024.06. GPA 3.69/5.00, top 10%."
+            >
+              广东技术师范大学，网络空间安全本科，2020.09 - 2024.06，GPA 3.69/5.00，前 10%。
+            </p>
+          </article>
+          <article>
+            <h3 data-en="Research Focus">研究方向</h3>
+            <ul class="keyword-list">
+              <li data-en="LLM Safety">大模型安全</li>
+              <li data-en="Agent Engineering">Agent 工程</li>
+              <li data-en="Data Governance">数据治理</li>
+              <li>Text2SQL</li>
+              <li>RAG</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block" id="competitions" aria-labelledby="competitions-title">
+        <h2 id="competitions-title" data-en="Competition Experience">比赛经历</h2>
+
+        <article class="media-entry featured-entry">
+          <div class="media-proof proof-duo" aria-label="TGAC 证明材料">
+            <figure>
+              <img src="./assets/proofs/tgac-certificate.jpg" alt="TGAC 腾讯游戏算法大赛亚军证书" />
+              <figcaption data-en="Official award certificate">获奖证书</figcaption>
+            </figure>
+            <figure>
+              <img src="./assets/proofs/tgac-trophy.jpg" alt="TGAC 腾讯游戏算法大赛亚军奖杯" />
+              <figcaption data-en="Second-place trophy">亚军奖杯</figcaption>
+            </figure>
+          </div>
+          <div class="entry-body">
+            <p class="entry-meta" data-en="Second Place / Team Leader / 2025">亚军 / 队长 / 2025</p>
+            <h3 data-en="TGAC Tencent Games Algorithm Competition, Data-Intelligence Decision Science">
+              TGAC 腾讯游戏算法大赛，数智决策科学赛道
+            </h3>
+            <p
+              data-en="A decision-science competition around business intelligence and SQL reasoning. Our team built a Text2SQL solution with data construction, supervised fine-tuning, GRPO exploration, and StarRocks execution feedback."
+            >
+              腾讯游戏算法大赛面向真实业务决策与智能分析场景。我们围绕 Text2SQL 数据构建、监督微调、GRPO 探索和 StarRocks 执行反馈搭建方案，最终获得赛道亚军。
+            </p>
+            <ul>
+              <li
+                data-en="Built a high-quality Text2SQL dataset and cleaned ambiguous SQL labels with executable feedback."
+              >
+                构建高质量 Text2SQL 数据集，并用可执行反馈清洗歧义 SQL 标注。
+              </li>
+              <li
+                data-en="Used SFT as the stable baseline, then explored GRPO with execution reward for answer correction."
+              >
+                以 SFT 作为稳定基线，再探索基于执行奖励的 GRPO 修正答案。
+              </li>
+              <li
+                data-en="Used StarRocks to validate SQL execution, compare result sets, and close the data-model-feedback loop."
+              >
+                使用 StarRocks 验证 SQL 执行、比较结果集，并闭合数据、模型、反馈链路。
+              </li>
+            </ul>
+            <a class="text-link" href="https://github.com/gstranded/tgac-2025-proof" target="_blank" rel="noopener noreferrer" data-en="Code">
+              代码仓库
+            </a>
+          </div>
+        </article>
+
+        <article class="media-entry">
+          <div class="media-proof single-proof">
+            <figure>
+              <img src="./assets/proofs/tianchi-ranking.jpg" alt="天池极客挑战赛用户购买行为预测排名证书" />
+              <figcaption data-en="Ranking certificate">排名证书</figcaption>
+            </figure>
+          </div>
+          <div class="entry-body">
+            <p class="entry-meta" data-en="Ranking 3 / 1543 teams / 2025">第 3 名 / 1543 支队伍 / 2025</p>
+            <h3 data-en="Tianchi Geek Challenge, User Purchase Behavior Prediction">
+              天池极客挑战，用户购买行为预测
+            </h3>
+            <p
+              data-en="The task predicts future purchase behavior from user-item interaction logs. The solution focused on time-window features, user, item and category statistics, temporal validation, and model ensembling."
+            >
+              赛题基于用户、商品和行为日志预测后续购买行为。方案重点放在时间窗口特征、用户、商品、类目统计、时序切分验证和模型融合上。
+            </p>
+            <ul>
+              <li data-en="Built behavior-window features for click, collect, cart, and purchase signals.">
+                围绕点击、收藏、加购、购买等行为构建时间窗口统计特征。
+              </li>
+              <li data-en="Used temporal validation to reduce leaderboard overfitting and stabilize offline-online consistency.">
+                使用时序验证降低榜单过拟合，提升离线与线上表现的一致性。
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="media-entry compact-entry">
+          <div class="media-proof small-proof">
+            <figure>
+              <img src="./assets/proofs/lanqiao-certificate.jpg" alt="蓝桥杯省三等奖证书" />
+              <figcaption data-en="Award certificate">获奖证书</figcaption>
+            </figure>
+          </div>
+          <div class="entry-body">
+            <p class="entry-meta" data-en="Provincial Third Prize / 2022">省三等奖 / 2022</p>
+            <h3 data-en="Lanqiao Cup, C/C++ Programming Contest">
+              蓝桥杯，C/C++ 程序设计大学 B 组
+            </h3>
+            <p
+              data-en="A programming contest focused on algorithm implementation and problem solving. I won the provincial third prize in the Guangdong division."
+            >
+              面向算法实现与程序设计能力的竞赛，获广东赛区 C/C++ 程序设计大学 B 组省三等奖。
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section-block" id="portfolio" aria-labelledby="portfolio-title">
+        <h2 id="portfolio-title" data-en="GitHub Portfolio">GitHub 作品集</h2>
+        <div class="portfolio-grid">
+          <article class="project-card">
+            <div class="project-topline">
+              <span data-en="Python / RAG system">Python / RAG 系统</span>
+              <span>★ 17</span>
+            </div>
+            <h3>
+              <a href="https://github.com/gstranded/RAGLEX" target="_blank" rel="noopener noreferrer">RAGLEX</a>
+            </h3>
+            <p
+              data-en="A legal-domain retrieval-augmented generation Q&A system for fast legal knowledge retrieval and answer generation."
+            >
+              法律领域检索增强生成问答系统，面向法律知识检索、问题理解和答案生成，强调高效与准确。
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span data-en="TypeScript / Monitoring">TypeScript / 监控系统</span>
+              <span>★ 3</span>
+            </div>
+            <h3>
+              <a href="https://github.com/gstranded/openclaw-monitor" target="_blank" rel="noopener noreferrer">openclaw-monitor</a>
+            </h3>
+            <p
+              data-en="A front-end and back-end monitoring system built around openclaw multi-agent coordination."
+            >
+              围绕 openclaw 多智能体协同开发的监控前后端，用于观察自身运行状态和关键链路。
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span data-en="Rust / Developer tool">Rust / 开发工具</span>
+              <span>★ 2</span>
+            </div>
+            <h3>
+              <a href="https://github.com/gstranded/codex-switch" target="_blank" rel="noopener noreferrer">codex-switch</a>
+            </h3>
+            <p
+              data-en="A Codex provider switcher with automatic local history sync, built for faster switching across development environments."
+            >
+              Codex provider 切换工具，支持自动同步本地历史，用于更快地切换不同开发环境。
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span data-en="Python / Data agent">Python / 数据 Agent</span>
+              <span>★ 1</span>
+            </div>
+            <h3>
+              <a href="https://github.com/gstranded/DataClean-Agent" target="_blank" rel="noopener noreferrer">DataClean-Agent</a>
+            </h3>
+            <p
+              data-en="A FastAPI-based training-data cleaning workbench covering format conversion, deterministic checks, content review, and repair candidate generation."
+            >
+              基于 FastAPI 的训练数据清洗工作台，覆盖格式转化、确定性格式检查、内容审查和修复候选生成。
+            </p>
+          </article>
+        </div>
+        <a class="text-link more-link" href="https://github.com/gstranded" target="_blank" rel="noopener noreferrer" data-en="More projects on GitHub">
+          更多 GitHub 项目
+        </a>
+      </section>
+
+      <section class="section-block" id="research" aria-labelledby="research-title">
+        <h2 id="research-title" data-en="Papers and Patents">论文与专利</h2>
+        <div class="paper-list">
+          <article class="media-entry paper-entry">
+            <figure class="paper-figure">
+              <img src="./assets/papers/dyna-ids-framework.png" alt="DyNA-IDS concept drift adaptation framework" />
+            </figure>
+            <div class="entry-body">
+              <p class="entry-meta">Inscrypt 2025 / CCF-C</p>
+              <h3>
+                <a
+                  href="https://link.springer.com/chapter/10.1007/978-981-95-6203-9_18"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-en="Revealing the Frailty of Static Benchmarks: The DyNA-IDS Framework for Concept Drift Adaptation in Time-Series Network Intrusion Detection"
+                >
+                  Revealing the Frailty of Static Benchmarks: The DyNA-IDS Framework for Concept Drift Adaptation in Time-Series Network Intrusion Detection
+                </a>
+              </h3>
+              <p
+                data-en="This paper studies concept drift in time-series network intrusion detection and proposes DyNA-IDS, a framework that uses short-window and long-window drift signals to trigger adaptive model updates."
+              >
+                这篇论文针对时间序列网络入侵检测中的概念漂移问题，提出 DyNA-IDS 框架，用短窗口和长窗口漂移检测触发模型自适应更新，提升动态流量场景下的稳定性。
+              </p>
+              <a
+                class="text-link"
+                href="https://link.springer.com/chapter/10.1007/978-981-95-6203-9_18"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-en="Paper link"
+              >
+                论文链接
+              </a>
+            </div>
+          </article>
+
+          <article class="media-entry paper-entry">
+            <figure class="paper-figure">
+              <img src="./assets/papers/bias-redteam-framework.png" alt="Gender bias red-team campaign framework" />
+            </figure>
+            <div class="entry-body">
+              <p class="entry-meta">IEEE TrustCom / CCF-C</p>
+              <h3>
+                <a
+                  href="https://www.computer.org/csdl/proceedings-article/trustcom/2025/653200a219/2dMlkHnGbn2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-en="Bias as an Exploit: A Scalable Red-Team Campaign to Uncover Gender-Based Vulnerabilities in Foundational Models"
+                >
+                  Bias as an Exploit: A Scalable Red-Team Campaign to Uncover Gender-Based Vulnerabilities in Foundational Models
+                </a>
+              </h3>
+              <p
+                data-en="This work treats gender bias as an exploitable safety weakness and builds a scalable red-team process based on occupation seed prompts, model filling, repeated querying, and response analysis."
+              >
+                这篇工作把性别偏见视作可被系统化利用的安全脆弱点，构建可扩展红队流程，通过职业种子提示、模型补全与再询问来发现基础模型中的性别相关风险。
+              </p>
+              <a
+                class="text-link"
+                href="https://www.computer.org/csdl/proceedings-article/trustcom/2025/653200a219/2dMlkHnGbn2"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-en="Paper link"
+              >
+                论文链接
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="section-subtitle" data-en="Published Patents">公开专利</h3>
+        <div class="patent-list">
+          <article>
+            <strong>一种基于多维变体的敏感词过滤方法和装置</strong>
+            <span>CN120950675A</span>
+          </article>
+          <article>
+            <strong>一种基于多模态的敏感词过滤方法和装置</strong>
+            <span>CN120929593A</span>
+          </article>
+          <article>
+            <strong>一种网络舆情的预警方法和装置</strong>
+            <span>CN120931154A</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block" id="experience" aria-labelledby="experience-title">
+        <h2 id="experience-title" data-en="Experience">工作经历</h2>
+        <article class="text-entry">
+          <p class="entry-meta" data-en="Zhuiyi Technology / Algorithm Researcher / 2026.04 - Now">
+            追一科技 / 算法研究员 / 2026.04 - 至今
+          </p>
+          <h3 data-en="OPPEIN Smart Home Voice Customer-Service Agent">
+            欧派智能家居语音客服 Agent
+          </h3>
+          <p
+            data-en="For e-commerce voice customer-service lead collection, designed configurable node orchestration and state-transition mechanisms by splitting business nodes, rule nodes, and semantic transfer nodes."
+          >
+            面向电商语音客服线索收集场景，设计可配置节点编排与状态流转机制，拆分业务节点、规则节点和语义中转节点，支持跳答、抢答、反悔、打断和跨节点补充等复杂交互。
+          </p>
+          <ul>
+            <li
+              data-en="Abstracted opening confirmation, address validation, category confirmation, house status, delivery time, window and door requirements, and salutation collection into executable nodes."
+            >
+              将开场确认、地址校验、品类确认、房屋状态、交付时间、门窗需求和称呼收集等任务抽象为可执行节点。
+            </li>
+            <li
+              data-en="Designed hybrid routing with rule routing and semantic transfer, supporting parameter hits, multi-level jumps, dynamic branch masking, missed-jump compensation, and fallback recovery."
+            >
+              设计规则路由与语义中转结合的混合跳转机制，支持参数命中、多级跳转、动态分支屏蔽、漏跳补偿和兜底回收。
+            </li>
+            <li
+              data-en="Designed rollback and voice-interruption continuation mechanisms to reduce repeated questioning and response delay."
+            >
+              设计反悔回撤与语音打断承接机制，降低重复问询和响应延迟。
+            </li>
+          </ul>
+        </article>
+
+        <article class="text-entry">
+          <p class="entry-meta" data-en="Zhuiyi Technology / Algorithm Researcher / 2025.03 - 2026.04">
+            追一科技 / 算法研究员 / 2025.03 - 2026.04
+          </p>
+          <h3 data-en="Industry LLM Data Production and Quality Governance">
+            博文行业大模型数据生产与质量治理建设
+          </h3>
+          <p
+            data-en="For Bowen industry LLM training, built a closed loop from data production and quality cleaning to model training, supporting multiple capabilities including question rewriting, entity extraction, safe refusal, process intent, and business intent."
+          >
+            面向博文行业大模型训练需求，构建从数据生产、质量清洗到模型训练的完整闭环，支撑问题改写、实体提取、安全拒识、流程意图识别和业务意图选择等多能力融合训练。
+          </p>
+          <ul>
+            <li
+              data-en="Designed a multi-task data production agent that automatically generates training and test samples for multiple industry LLM capabilities."
+            >
+              设计多任务数据生产 Agent，自动生成问题改写、实体提取、安全拒识、流程意图和业务意图等训练与测试样本。
+            </li>
+            <li
+              data-en="Built a data-cleaning workflow based on agent error attribution and deterministic tool repair, separating format and semantic issues."
+            >
+              构建基于 Agent 错误归因和确定性工具修复的数据清洗流程，将问题拆分为格式类与语义类。
+            </li>
+            <li
+              data-en="Trained the Bowen 4B industry LLM on cleaned data and built a vLLM evaluation pipeline, reaching 80%+ accuracy on core tasks such as entity extraction and intent selection."
+            >
+              基于清洗后的高质量数据训练博文 4B 行业大模型，并使用 vLLM 搭建推理评测链路，在实体提取、意图选择等核心任务上准确率达到 80%+。
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section-block" id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title" data-en="Skills">技能描述</h2>
+        <div class="skill-grid">
+          <article>
+            <h3 data-en="Agent Systems">Agent 系统</h3>
+            <p
+              data-en="Multi-turn business dialogue, node orchestration, semantic routing, interruption recovery, fallback handling, and workflow state control."
+            >
+              多轮业务对话、节点编排、语义路由、打断恢复、兜底回收和工作流状态控制。
+            </p>
+          </article>
+          <article>
+            <h3 data-en="LLM Data Engineering">大模型数据工程</h3>
+            <p
+              data-en="Training-data production, format validation, semantic review, deterministic repair tools, and data-quality feedback loops."
+            >
+              训练数据生产、格式校验、语义审查、确定性工具修复和数据质量反馈闭环。
+            </p>
+          </article>
+          <article>
+            <h3 data-en="Model Training and Evaluation">模型训练与评测</h3>
+            <p
+              data-en="SFT, LoRA, vLLM inference evaluation, RAG-enhanced filtering, cost-aware routing, and Text2SQL execution validation."
+            >
+              SFT、LoRA、vLLM 推理评测、RAG 增强过滤、成本感知模型路由和 Text2SQL 执行验证。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block" id="blog" aria-labelledby="blog-title">
+        <h2 id="blog-title" data-en="Blog Homepages">博客主页</h2>
+        <div class="blog-home-grid">
+          <a class="blog-home-card" href="https://blog.csdn.net/m0_52701251" target="_blank" rel="noopener noreferrer">
+            <span class="blog-platform" data-en="CSDN Blog">CSDN 博客</span>
+            <strong data-en="Algorithm notes, AI practice, and technical records">算法笔记、AI 实践和技术记录</strong>
+            <span class="blog-url">blog.csdn.net/m0_52701251</span>
+          </a>
+          <a class="blog-home-card" href="https://www.cnblogs.com/gstranded" target="_blank" rel="noopener noreferrer">
+            <span class="blog-platform" data-en="Cnblogs">博客园</span>
+            <strong data-en="Project reviews, engineering practice, and long-form archive">项目复盘、工程实践和长文归档</strong>
+            <span class="blog-url">cnblogs.com/gstranded</span>
+          </a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       © <span id="year"></span>
-      <span data-en="Hsunshinez Gao · Personal Homepage">高海圳 · 个人主页</span>
+      <span data-en="Hsunshinez Gao / Personal Homepage">高海圳 / 个人主页</span>
     </footer>
 
     <script src="./script.js"></script>
