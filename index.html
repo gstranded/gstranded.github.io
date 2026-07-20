@@ -46,9 +46,9 @@
             <nav class="site-nav" aria-label="页面导航">
               <a href="#about"><span data-en="Profile">个人简介</span></a>
               <a href="#competitions"><span data-en="Competitions">比赛经历</span></a>
+              <a href="#experience"><span data-en="Experience">工作经历</span></a>
               <a href="#portfolio"><span data-en="Projects">项目</span></a>
               <a href="#research"><span data-en="Papers">论文专利</span></a>
-              <a href="#experience"><span data-en="Experience">工作经历</span></a>
               <a href="#skills"><span data-en="Skills">技能</span></a>
               <a href="#blog"><span data-en="Blog">博客</span></a>
             </nav>
@@ -183,24 +183,70 @@
           </div>
         </article>
 
-        <article class="media-entry compact-entry">
-          <div class="media-proof small-proof">
-            <figure>
-              <img src="./assets/proofs/lanqiao-certificate.jpg" alt="蓝桥杯省三等奖证书" />
-              <figcaption data-en="Award certificate">获奖证书</figcaption>
-            </figure>
-          </div>
-          <div class="entry-body">
-            <p class="entry-meta" data-en="Provincial Third Prize / 2022">省三等奖 / 2022</p>
-            <h3 data-en="Lanqiao Cup, C/C++ Programming Contest">
-              蓝桥杯，C/C++ 程序设计大学 B 组
-            </h3>
-            <p
-              data-en="A programming contest focused on algorithm implementation and problem solving. I won the provincial third prize in the Guangdong division."
+      </section>
+
+      <section class="section-block" id="experience" aria-labelledby="experience-title">
+        <h2 id="experience-title" data-en="Experience">工作经历</h2>
+        <article class="text-entry">
+          <p class="entry-meta" data-en="Zhuiyi Technology / Algorithm Researcher / 2026.04 - Now">
+            追一科技 / 算法研究员 / 2026.04 - 至今
+          </p>
+          <h3 data-en="OPPEIN Smart Home Voice Customer-Service Agent">
+            欧派智能家居语音客服 Agent
+          </h3>
+          <p
+            data-en="For e-commerce voice customer-service lead collection, designed configurable node orchestration and state-transition mechanisms by splitting business nodes, rule nodes, and semantic transfer nodes."
+          >
+            面向电商语音客服线索收集场景，设计可配置节点编排与状态流转机制，拆分业务节点、规则节点和语义中转节点，支持跳答、抢答、反悔、打断和跨节点补充等复杂交互。
+          </p>
+          <ul>
+            <li
+              data-en="Abstracted opening confirmation, address validation, category confirmation, house status, delivery time, window and door requirements, and salutation collection into executable nodes."
             >
-              面向算法实现与程序设计能力的竞赛，获广东赛区 C/C++ 程序设计大学 B 组省三等奖。
-            </p>
-          </div>
+              将开场确认、地址校验、品类确认、房屋状态、交付时间、门窗需求和称呼收集等任务抽象为可执行节点。
+            </li>
+            <li
+              data-en="Designed hybrid routing with rule routing and semantic transfer, supporting parameter hits, multi-level jumps, dynamic branch masking, missed-jump compensation, and fallback recovery."
+            >
+              设计规则路由与语义中转结合的混合跳转机制，支持参数命中、多级跳转、动态分支屏蔽、漏跳补偿和兜底回收。
+            </li>
+            <li
+              data-en="Designed rollback and voice-interruption continuation mechanisms to reduce repeated questioning and response delay."
+            >
+              设计反悔回撤与语音打断承接机制，降低重复问询和响应延迟。
+            </li>
+          </ul>
+        </article>
+
+        <article class="text-entry">
+          <p class="entry-meta" data-en="Zhuiyi Technology / Algorithm Researcher / 2025.03 - 2026.04">
+            追一科技 / 算法研究员 / 2025.03 - 2026.04
+          </p>
+          <h3 data-en="Industry LLM Data Production and Quality Governance">
+            博文行业大模型数据生产与质量治理建设
+          </h3>
+          <p
+            data-en="For Bowen industry LLM training, built a closed loop from data production and quality cleaning to model training, supporting multiple capabilities including question rewriting, entity extraction, safe refusal, process intent, and business intent."
+          >
+            面向博文行业大模型训练需求，构建从数据生产、质量清洗到模型训练的完整闭环，支撑问题改写、实体提取、安全拒识、流程意图识别和业务意图选择等多能力融合训练。
+          </p>
+          <ul>
+            <li
+              data-en="Designed a multi-task data production agent that automatically generates training and test samples for multiple industry LLM capabilities."
+            >
+              设计多任务数据生产 Agent，自动生成问题改写、实体提取、安全拒识、流程意图和业务意图等训练与测试样本。
+            </li>
+            <li
+              data-en="Built a data-cleaning workflow based on agent error attribution and deterministic tool repair, separating format and semantic issues."
+            >
+              构建基于 Agent 错误归因和确定性工具修复的数据清洗流程，将问题拆分为格式类与语义类。
+            </li>
+            <li
+              data-en="Trained the Bowen 4B industry LLM on cleaned data and built a vLLM evaluation pipeline, reaching 80%+ accuracy on core tasks such as entity extraction and intent selection."
+            >
+              基于清洗后的高质量数据训练博文 4B 行业大模型，并使用 vLLM 搭建推理评测链路，在实体提取、意图选择等核心任务上准确率达到 80%+。
+            </li>
+          </ul>
         </article>
       </section>
 
@@ -357,71 +403,6 @@
             <span>CN120931154A</span>
           </article>
         </div>
-      </section>
-
-      <section class="section-block" id="experience" aria-labelledby="experience-title">
-        <h2 id="experience-title" data-en="Experience">工作经历</h2>
-        <article class="text-entry">
-          <p class="entry-meta" data-en="Zhuiyi Technology / Algorithm Researcher / 2026.04 - Now">
-            追一科技 / 算法研究员 / 2026.04 - 至今
-          </p>
-          <h3 data-en="OPPEIN Smart Home Voice Customer-Service Agent">
-            欧派智能家居语音客服 Agent
-          </h3>
-          <p
-            data-en="For e-commerce voice customer-service lead collection, designed configurable node orchestration and state-transition mechanisms by splitting business nodes, rule nodes, and semantic transfer nodes."
-          >
-            面向电商语音客服线索收集场景，设计可配置节点编排与状态流转机制，拆分业务节点、规则节点和语义中转节点，支持跳答、抢答、反悔、打断和跨节点补充等复杂交互。
-          </p>
-          <ul>
-            <li
-              data-en="Abstracted opening confirmation, address validation, category confirmation, house status, delivery time, window and door requirements, and salutation collection into executable nodes."
-            >
-              将开场确认、地址校验、品类确认、房屋状态、交付时间、门窗需求和称呼收集等任务抽象为可执行节点。
-            </li>
-            <li
-              data-en="Designed hybrid routing with rule routing and semantic transfer, supporting parameter hits, multi-level jumps, dynamic branch masking, missed-jump compensation, and fallback recovery."
-            >
-              设计规则路由与语义中转结合的混合跳转机制，支持参数命中、多级跳转、动态分支屏蔽、漏跳补偿和兜底回收。
-            </li>
-            <li
-              data-en="Designed rollback and voice-interruption continuation mechanisms to reduce repeated questioning and response delay."
-            >
-              设计反悔回撤与语音打断承接机制，降低重复问询和响应延迟。
-            </li>
-          </ul>
-        </article>
-
-        <article class="text-entry">
-          <p class="entry-meta" data-en="Zhuiyi Technology / Algorithm Researcher / 2025.03 - 2026.04">
-            追一科技 / 算法研究员 / 2025.03 - 2026.04
-          </p>
-          <h3 data-en="Industry LLM Data Production and Quality Governance">
-            博文行业大模型数据生产与质量治理建设
-          </h3>
-          <p
-            data-en="For Bowen industry LLM training, built a closed loop from data production and quality cleaning to model training, supporting multiple capabilities including question rewriting, entity extraction, safe refusal, process intent, and business intent."
-          >
-            面向博文行业大模型训练需求，构建从数据生产、质量清洗到模型训练的完整闭环，支撑问题改写、实体提取、安全拒识、流程意图识别和业务意图选择等多能力融合训练。
-          </p>
-          <ul>
-            <li
-              data-en="Designed a multi-task data production agent that automatically generates training and test samples for multiple industry LLM capabilities."
-            >
-              设计多任务数据生产 Agent，自动生成问题改写、实体提取、安全拒识、流程意图和业务意图等训练与测试样本。
-            </li>
-            <li
-              data-en="Built a data-cleaning workflow based on agent error attribution and deterministic tool repair, separating format and semantic issues."
-            >
-              构建基于 Agent 错误归因和确定性工具修复的数据清洗流程，将问题拆分为格式类与语义类。
-            </li>
-            <li
-              data-en="Trained the Bowen 4B industry LLM on cleaned data and built a vLLM evaluation pipeline, reaching 80%+ accuracy on core tasks such as entity extraction and intent selection."
-            >
-              基于清洗后的高质量数据训练博文 4B 行业大模型，并使用 vLLM 搭建推理评测链路，在实体提取、意图选择等核心任务上准确率达到 80%+。
-            </li>
-          </ul>
-        </article>
       </section>
 
       <section class="section-block" id="skills" aria-labelledby="skills-title">
