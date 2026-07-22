@@ -2,6 +2,11 @@ const year = document.querySelector("#year");
 const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
 const languageButtons = Array.from(document.querySelectorAll("[data-lang]"));
 const translatableNodes = Array.from(document.querySelectorAll("[data-en]"));
+const portfolioGrid = document.querySelector(".portfolio-grid");
+const projectCards = Array.from(document.querySelectorAll(".project-card[data-repo]"));
+
+const STAR_CACHE_KEY = "github-portfolio-stars";
+const STAR_CACHE_TTL = 6 * 60 * 60 * 1000;
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -50,6 +55,85 @@ languageButtons.forEach((button) => {
   button.addEventListener("click", () => applyLanguage(button.dataset.lang));
 });
 
+const readCachedStars = () => {
+  try {
+    const cached = JSON.parse(localStorage.getItem(STAR_CACHE_KEY));
+    const cacheIsFresh = Date.now() - cached.updatedAt < STAR_CACHE_TTL;
+
+    return cacheIsFresh && cached.stars ? cached.stars : null;
+  } catch {
+    return null;
+  }
+};
+
+const writeCachedStars = (stars) => {
+  try {
+    localStorage.setItem(
+      STAR_CACHE_KEY,
+      JSON.stringify({ updatedAt: Date.now(), stars }),
+    );
+  } catch {
+    // The live values still work when storage is unavailable.
+  }
+};
+
+const applyPortfolioStars = (stars) => {
+  projectCards.forEach((card, index) => {
+    const repoName = card.dataset.repo;
+    const liveCount = Number(stars[repoName.toLowerCase()]);
+    const fallbackCount = Number(card.dataset.stars);
+    const count = Number.isFinite(liveCount) ? liveCount : fallbackCount;
+    const starLabel = card.querySelector(".project-stars");
+
+    card.dataset.stars = String(count);
+    card.dataset.originalOrder ??= String(index);
+
+    if (starLabel) {
+      const formattedCount = count.toLocaleString("en-US");
+      starLabel.textContent = `★ ${formattedCount}`;
+      starLabel.setAttribute("aria-label", `GitHub Stars: ${formattedCount}`);
+    }
+  });
+
+  projectCards
+    .sort(
+      (a, b) =>
+        Number(b.dataset.stars) - Number(a.dataset.stars) ||
+        Number(a.dataset.originalOrder) - Number(b.dataset.originalOrder),
+    )
+    .forEach((card) => portfolioGrid?.append(card));
+};
+
+const loadPortfolioStars = async () => {
+  const cachedStars = readCachedStars();
+
+  if (cachedStars) {
+    applyPortfolioStars(cachedStars);
+    return;
+  }
+
+  try {
+    const response = await fetch(
+      "https://api.github.com/users/gstranded/repos?per_page=100&type=owner",
+      { headers: { Accept: "application/vnd.github+json" } },
+    );
+
+    if (!response.ok) {
+      return;
+    }
+
+    const repositories = await response.json();
+    const stars = Object.fromEntries(
+      repositories.map((repo) => [repo.name.toLowerCase(), repo.stargazers_count]),
+    );
+
+    applyPortfolioStars(stars);
+    writeCachedStars(stars);
+  } catch {
+    // Keep the current values and order when GitHub is unavailable.
+  }
+};
+
 const setActiveLink = (id) => {
   navLinks.forEach((link) => {
     link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
@@ -83,3 +167,4 @@ if ("IntersectionObserver" in window) {
 }
 
 applyLanguage(getSavedLanguage() || "zh");
+loadPortfolioStars();
