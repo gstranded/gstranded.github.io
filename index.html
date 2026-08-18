@@ -65,25 +65,6 @@
               关注 Agent 系统、大模型安全、数据治理、Text2SQL 与端侧大模型应用。
             </p>
 
-            <dl class="hero-stats">
-              <div class="stat">
-                <dt>3.96</dt>
-                <dd data-en="GPA / 5.00">GPA / 5.00</dd>
-              </div>
-              <div class="stat">
-                <dt data-en="Top 10%">前 10%</dt>
-                <dd data-en="Class Rank">专业排名</dd>
-              </div>
-              <div class="stat">
-                <dt data-en="CCF-C ×2">CCF-C ×2</dt>
-                <dd data-en="First / Second Author">论文一作 / 二作</dd>
-              </div>
-              <div class="stat">
-                <dt data-en="2nd Place">亚军</dt>
-                <dd data-en="TGAC 2025">TGAC 2025 腾讯算法大赛</dd>
-              </div>
-            </dl>
-
             <p class="contact-line">
               <a href="mailto:hsunshinez@163.com">hsunshinez@163.com</a>
               <span>/</span>
@@ -208,7 +189,7 @@
           </div>
           <div class="entry-body">
             <p class="entry-meta">
-              <span class="tag tag-accent" data-en="3rd Place">第 3 名</span>
+              <span class="tag tag-accent" data-en="3rd Place">季军</span>
               <span class="tag" data-en="1,543 teams">1543 支队伍</span>
               <span class="tag" data-en="2025">2025</span>
             </p>
@@ -354,65 +335,156 @@
           <span class="section-index">04</span>
           <h2 id="portfolio-title" data-en="GitHub Portfolio">GitHub 作品集</h2>
         </div>
-        <div class="portfolio-grid">
-          <article class="project-card card" data-repo="RAGLEX" data-stars="19">
-            <div class="project-topline">
-              <span data-en="Python / RAG system">Python / RAG 系统</span>
-              <span class="project-stars" aria-label="GitHub Stars: 19">★ 19</span>
+        <div class="project-list">
+          <article class="project-entry" data-repo="RAGLEX" data-stars="19">
+            <div class="project-cover cover-indigo" aria-hidden="true">
+              <span class="project-monogram">R</span>
+              <span class="project-lang" data-en="Python / RAG">Python / RAG</span>
             </div>
-            <h3>
-              <a href="https://github.com/gstranded/RAGLEX" target="_blank" rel="noopener noreferrer">RAGLEX</a>
-            </h3>
-            <p
-              data-en="A legal-domain retrieval-augmented generation Q&A system for fast legal knowledge retrieval and answer generation."
-            >
-              法律领域检索增强生成问答系统，面向法律知识检索、问题理解和答案生成，强调高效与准确。
-            </p>
+            <div class="entry-body">
+              <p class="entry-meta">
+                <span class="tag" data-en="Python / RAG system">Python / RAG 系统</span>
+                <span class="tag tag-accent project-stars" aria-label="GitHub Stars: 19">★ 19</span>
+              </p>
+              <h3>
+                <a href="https://github.com/gstranded/RAGLEX" target="_blank" rel="noopener noreferrer">RAGLEX</a>
+              </h3>
+              <p
+                data-en="A legal-domain knowledge-base Q&A system built with Vue 3 and Flask: local document upload, chunking and retrieval, public/private knowledge-base isolation, optional web-search enhancement, and any OpenAI-compatible model."
+              >
+                面向法律场景的知识库问答系统（Vue 3 + Flask）：本地知识库上传、切片与检索，公有/私有知识库隔离，可接入任意 OpenAI-compatible 模型，并支持可选联网搜索增强。
+              </p>
+              <ul>
+                <li
+                  data-en="Local knowledge-base upload, chunking and retrieval with public/private isolation, ready for local reproduction."
+                >
+                  本地知识库上传、切片与检索，公有/私有知识库隔离，链路不依赖私有 IP，适合直接开源复现与本地部署。
+                </li>
+                <li
+                  data-en="Persistent chat history and independently managed knowledge bases."
+                >
+                  会话历史持久化，知识库可独立管理，便于审计与持续使用。
+                </li>
+              </ul>
+              <a class="text-link" href="https://github.com/gstranded/RAGLEX" target="_blank" rel="noopener noreferrer" data-en="GitHub Repository">GitHub 仓库</a>
+            </div>
           </article>
 
-          <article class="project-card card" data-repo="openclaw-monitor" data-stars="4">
-            <div class="project-topline">
-              <span data-en="TypeScript / Monitoring">TypeScript / 监控系统</span>
-              <span class="project-stars" aria-label="GitHub Stars: 4">★ 4</span>
+          <article class="project-entry" data-repo="openclaw-monitor" data-stars="4">
+            <div class="project-cover cover-cyan" aria-hidden="true">
+              <span class="project-monogram">O</span>
+              <span class="project-lang" data-en="TypeScript / Node">TypeScript / Node</span>
             </div>
-            <h3>
-              <a href="https://github.com/gstranded/openclaw-monitor" target="_blank" rel="noopener noreferrer">openclaw-monitor</a>
-            </h3>
-            <p
-              data-en="A front-end and back-end monitoring system built around openclaw multi-agent coordination."
-            >
-              围绕 openclaw 多智能体协同开发的监控前后端，用于观察自身运行状态和关键链路。
-            </p>
+            <div class="entry-body">
+              <p class="entry-meta">
+                <span class="tag" data-en="TypeScript / Monitoring">TypeScript / 监控系统</span>
+                <span class="tag tag-accent project-stars" aria-label="GitHub Stars: 4">★ 4</span>
+              </p>
+              <h3>
+                <a href="https://github.com/gstranded/openclaw-monitor" target="_blank" rel="noopener noreferrer">openclaw-monitor</a>
+              </h3>
+              <p
+                data-en="An observability dashboard for OpenClaw multi-agent runtime (independently built by the team): aggregates agent status, score rankings, activity timelines and event streams from runtime JSON snapshots, with controlled Markdown file management."
+              >
+                OpenClaw 运行态可观测性监控台（团队独立开发）：从 runtime JSON 快照聚合出 Agent 状态、积分排行、活动时间线与事件流，并提供受控的 Markdown 文件管理。
+              </p>
+              <ul>
+                <li
+                  data-en="Agent status cards, score leaderboard, activity timeline, event stream and data-source health visibility."
+                >
+                  Agent 状态卡片、积分排行榜、活动时间线、事件流与数据源健康度（meta.partial / degradeReasons / freshness）可见。
+                </li>
+                <li
+                  data-en="Conservative allowlist + boundary checks + rollback + audit policy for write operations; out-of-bounds paths return FORBIDDEN_PATH."
+                >
+                  写操作采用 allowlist + 边界校验 + rollback + audit 保守策略，越界路径明确返回 FORBIDDEN_PATH。
+                </li>
+                <li
+                  data-en="Node aggregation API with a Vite frontend, CI quality gates and one-command local run."
+                >
+                  Node 聚合 API + Vite 前端，含 CI 质量门禁与一键本地运行脚本。
+                </li>
+              </ul>
+              <a class="text-link" href="https://github.com/gstranded/openclaw-monitor" target="_blank" rel="noopener noreferrer" data-en="GitHub Repository">GitHub 仓库</a>
+            </div>
           </article>
 
-          <article class="project-card card" data-repo="codex-switch" data-stars="4">
-            <div class="project-topline">
-              <span data-en="Rust / Developer tool">Rust / 开发工具</span>
-              <span class="project-stars" aria-label="GitHub Stars: 4">★ 4</span>
+          <article class="project-entry" data-repo="codex-switch" data-stars="5">
+            <div class="project-cover cover-violet" aria-hidden="true">
+              <span class="project-monogram">C</span>
+              <span class="project-lang" data-en="Rust / Desktop">Rust / 桌面端</span>
             </div>
-            <h3>
-              <a href="https://github.com/gstranded/codex-switch" target="_blank" rel="noopener noreferrer">codex-switch</a>
-            </h3>
-            <p
-              data-en="A Codex provider switcher with automatic local history sync, built for faster switching across development environments."
-            >
-              Codex provider 切换工具，支持自动同步本地历史，用于更快地切换不同开发环境。
-            </p>
+            <div class="entry-body">
+              <p class="entry-meta">
+                <span class="tag" data-en="Rust / Developer tool">Rust / 开发工具</span>
+                <span class="tag tag-accent project-stars" aria-label="GitHub Stars: 4">★ 4</span>
+              </p>
+              <h3>
+                <a href="https://github.com/gstranded/codex-switch" target="_blank" rel="noopener noreferrer">codex-switch</a>
+              </h3>
+              <p
+                data-en="A Codex provider switcher in Rust (forked from CC Switch): centrally manages official Codex/ChatGPT login state and custom API providers, switches with one click and auto-syncs local chat history so switching providers never loses history."
+              >
+                基于 CC Switch 二次开发的 Codex 供应商切换工具（Rust）：集中维护官方 Codex/ChatGPT 登录态与自定义 API Provider，一键切换并自动同步本地聊天记录，切换供应商不丢历史。
+              </p>
+              <ul>
+                <li
+                  data-en="Rewrites model_provider in JSONL session metadata and SQLite threads so chat history continues seamlessly after switching."
+                >
+                  切换后自动改写 JSONL 会话元数据与 SQLite threads 的 model_provider，让旧对话在历史列表中继续可见。
+                </li>
+                <li
+                  data-en="Full cross-machine migration of chats, providers, keys and login configs, with incremental safe backups."
+                >
+                  支持聊天记录、Provider、Key 与登录配置的跨电脑完整迁移，以及增量安全备份。
+                </li>
+                <li
+                  data-en="Ships Windows / macOS / Linux installers for one-click setup."
+                >
+                  发布 Windows / macOS / Linux 多平台安装包，开箱即用。
+                </li>
+              </ul>
+              <a class="text-link" href="https://github.com/gstranded/codex-switch" target="_blank" rel="noopener noreferrer" data-en="GitHub Repository">GitHub 仓库</a>
+            </div>
           </article>
 
-          <article class="project-card card" data-repo="DataClean-Agent" data-stars="2">
-            <div class="project-topline">
-              <span data-en="Python / Data agent">Python / 数据 Agent</span>
-              <span class="project-stars" aria-label="GitHub Stars: 2">★ 2</span>
+          <article class="project-entry" data-repo="DataClean-Agent" data-stars="3">
+            <div class="project-cover cover-amber" aria-hidden="true">
+              <span class="project-monogram">D</span>
+              <span class="project-lang" data-en="Python / FastAPI">Python / FastAPI</span>
             </div>
-            <h3>
-              <a href="https://github.com/gstranded/DataClean-Agent" target="_blank" rel="noopener noreferrer">DataClean-Agent</a>
-            </h3>
-            <p
-              data-en="A FastAPI-based training-data cleaning workbench covering format conversion, deterministic checks, content review, and repair candidate generation."
-            >
-              基于 FastAPI 的训练数据清洗工作台，覆盖格式转化、确定性格式检查、内容审查和修复候选生成。
-            </p>
+            <div class="entry-body">
+              <p class="entry-meta">
+                <span class="tag" data-en="Python / Data agent">Python / 数据 Agent</span>
+                <span class="tag tag-accent project-stars" aria-label="GitHub Stars: 2">★ 2</span>
+              </p>
+              <h3>
+                <a href="https://github.com/gstranded/DataClean-Agent" target="_blank" rel="noopener noreferrer">DataClean-Agent</a>
+              </h3>
+              <p
+                data-en="A FastAPI + LangGraph training-data cleaning workbench that chains format conversion, deterministic format checks, content review and repair-candidate generation into a browser-operable flow, with CLI and testable Python modules."
+              >
+                基于 FastAPI 与 LangGraph 的训练数据清洗工作台：把格式转化、确定性格式检查、内容审查与修复候选生成串成可在浏览器中操作的完整流程，同时保留 CLI 与可测试的 Python 模块。
+              </p>
+              <ul>
+                <li
+                  data-en="Converts CSV / XLSX / JSONL into target JSONL via mapping rules and standard samples."
+                >
+                  上传 CSV / XLSX / JSONL，按目标格式、映射规则与标准样例生成目标 JSONL。
+                </li>
+                <li
+                  data-en="Deterministic checks output auto-fixable data, review queues and format reports."
+                >
+                  确定性格式检查输出可自动修复数据、复核队列与格式报告。
+                </li>
+                <li
+                  data-en="Web UI panel shows task progress, metrics, logs and artifact downloads."
+                >
+                  Web UI 运行面板展示任务进度、指标、日志与产物下载。
+                </li>
+              </ul>
+              <a class="text-link" href="https://github.com/gstranded/DataClean-Agent" target="_blank" rel="noopener noreferrer" data-en="GitHub Repository">GitHub 仓库</a>
+            </div>
           </article>
         </div>
         <a class="text-link more-link" href="https://github.com/gstranded" target="_blank" rel="noopener noreferrer" data-en="More projects on GitHub">

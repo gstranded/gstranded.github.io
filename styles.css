@@ -356,39 +356,9 @@ h1 {
 
 .hero-summary {
   max-width: 720px;
-  margin: 0 0 26px;
+  margin: 0 0 30px;
   color: var(--muted);
   font-size: 1.04rem;
-}
-
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin: 0 0 26px;
-}
-
-.stat {
-  padding: 12px 14px 11px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-.stat dt {
-  color: var(--ink);
-  font-size: 1.32rem;
-  font-weight: 900;
-  line-height: 1.25;
-  font-variant-numeric: tabular-nums;
-}
-
-.stat dd {
-  margin: 2px 0 0;
-  color: var(--muted);
-  font-size: 0.8rem;
 }
 
 .contact-line {
@@ -668,55 +638,93 @@ figcaption {
 
 /* ---------- 9. GitHub 作品集 ---------- */
 
-.portfolio-grid {
+.project-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 26px;
   margin-top: 4px;
 }
 
-.project-card {
-  min-height: 190px;
-  padding: 20px;
+.project-entry {
+  display: grid;
+  grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
-.project-card:hover {
+.project-entry:hover {
   border-color: var(--accent-line);
   box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
-.project-topline {
-  display: flex;
-  justify-content: space-between;
-  gap: 14px;
-  margin-bottom: 9px;
-  color: var(--muted);
-  font-size: 0.86rem;
-  font-weight: 850;
+.project-cover {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 170px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
 }
 
-.project-topline span {
-  color: inherit;
+.project-cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(240px 140px at 20% 0%, rgba(255, 255, 255, 0.22), transparent 60%),
+    radial-gradient(200px 160px at 90% 100%, rgba(255, 255, 255, 0.14), transparent 55%);
 }
 
-.project-stars {
-  font-variant-numeric: tabular-nums;
+.cover-indigo {
+  background: linear-gradient(135deg, #1e3fae, #5b7df0);
 }
 
-.project-card h3 a {
+.cover-cyan {
+  background: linear-gradient(135deg, #0e7490, #3fd0d8);
+}
+
+.cover-violet {
+  background: linear-gradient(135deg, #5b21b6, #9d7bf5);
+}
+
+.cover-amber {
+  background: linear-gradient(135deg, #b45309, #f0b33f);
+}
+
+.project-monogram {
+  position: relative;
+  color: #fff;
+  font-size: 4.2rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0;
+  text-shadow: 0 2px 14px rgba(11, 18, 32, 0.28);
+}
+
+.project-lang {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.project-entry h3 a {
   color: var(--ink);
   text-decoration: none;
 }
 
-.project-card h3 a:hover {
+.project-entry h3 a:hover {
   color: var(--accent);
   text-decoration: underline;
-}
-
-.project-card p {
-  margin: 0;
 }
 
 .more-link {
@@ -949,7 +957,7 @@ figcaption {
     transition: none;
   }
 
-  .project-card,
+  .project-entry,
   .blog-home-card,
   .back-to-top {
     transition: none;
@@ -1003,19 +1011,21 @@ figcaption {
     height: 190px;
   }
 
-  .hero-stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .media-entry,
   .featured-entry,
-  .paper-entry {
+  .paper-entry,
+  .project-entry {
     grid-template-columns: 1fr;
   }
 
   .media-proof,
   .paper-figure {
     max-width: 440px;
+  }
+
+  .project-cover {
+    max-width: 440px;
+    min-height: 150px;
   }
 
   .skill-grid,
@@ -1066,18 +1076,6 @@ figcaption {
     font-size: 1.04rem;
   }
 
-  .hero-stats {
-    gap: 8px;
-  }
-
-  .stat {
-    padding: 10px 12px 9px;
-  }
-
-  .stat dt {
-    font-size: 1.14rem;
-  }
-
   .section-block {
     padding: 36px 0 38px;
   }
@@ -1092,10 +1090,14 @@ figcaption {
   }
 
   .fact-grid,
-  .portfolio-grid,
   .blog-home-grid,
   .proof-duo {
     grid-template-columns: 1fr;
+  }
+
+  .project-entry {
+    gap: 18px;
+    padding: 18px;
   }
 
   .proof-duo img,

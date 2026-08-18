@@ -158,8 +158,8 @@
 
   /* ---------- 6. GitHub Stars 动态加载 ---------- */
 
-  const portfolioGrid = document.querySelector(".portfolio-grid");
-  const projectCards = Array.from(document.querySelectorAll(".project-card[data-repo]"));
+  const portfolioGrid = document.querySelector(".project-list");
+  const projectCards = Array.from(document.querySelectorAll(".project-entry[data-repo]"));
 
   const STAR_CACHE_KEY = "github-portfolio-stars";
   const STAR_CACHE_TTL = 6 * 60 * 60 * 1000;
