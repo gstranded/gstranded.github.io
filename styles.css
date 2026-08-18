@@ -665,56 +665,31 @@ figcaption {
 
 .project-cover {
   position: relative;
-  display: grid;
-  place-items: center;
-  min-height: 170px;
+  aspect-ratio: 1 / 1;
   border-radius: var(--radius-sm);
   overflow: hidden;
 }
 
-.project-cover::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(240px 140px at 20% 0%, rgba(255, 255, 255, 0.22), transparent 60%),
-    radial-gradient(200px 160px at 90% 100%, rgba(255, 255, 255, 0.14), transparent 55%);
-}
-
-.cover-indigo {
-  background: linear-gradient(135deg, #1e3fae, #5b7df0);
-}
-
-.cover-cyan {
-  background: linear-gradient(135deg, #0e7490, #3fd0d8);
-}
-
-.cover-violet {
-  background: linear-gradient(135deg, #5b21b6, #9d7bf5);
-}
-
-.cover-amber {
-  background: linear-gradient(135deg, #b45309, #f0b33f);
-}
-
-.project-monogram {
-  position: relative;
-  color: #fff;
-  font-size: 4.2rem;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: 0;
-  text-shadow: 0 2px 14px rgba(11, 18, 32, 0.28);
+.project-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-lang {
   position: absolute;
   left: 12px;
   bottom: 10px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.78rem;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(11, 18, 32, 0.42);
+  color: #fff;
+  font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.04em;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 
 .project-entry h3 a {
@@ -1024,8 +999,7 @@ figcaption {
   }
 
   .project-cover {
-    max-width: 440px;
-    min-height: 150px;
+    max-width: 300px;
   }
 
   .skill-grid,
