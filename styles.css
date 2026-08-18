@@ -131,6 +131,10 @@ ul {
   font-weight: 900;
 }
 
+.entry-body .text-link + .text-link {
+  margin-left: 16px;
+}
+
 .tag {
   display: inline-flex;
   align-items: center;

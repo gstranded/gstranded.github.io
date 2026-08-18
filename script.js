@@ -158,7 +158,6 @@
 
   /* ---------- 6. GitHub Stars 动态加载 ---------- */
 
-  const portfolioGrid = document.querySelector(".project-list");
   const projectCards = Array.from(document.querySelectorAll(".project-entry[data-repo]"));
 
   const STAR_CACHE_KEY = "github-portfolio-stars";
@@ -186,7 +185,8 @@
   };
 
   const applyPortfolioStars = (stars) => {
-    projectCards.forEach((card, index) => {
+    // 只更新 star 数字，保持页面中人工编排的项目顺序
+    projectCards.forEach((card) => {
       const repoName = card.dataset.repo;
       const liveCount = Number(stars[repoName.toLowerCase()]);
       const fallbackCount = Number(card.dataset.stars);
@@ -194,7 +194,6 @@
       const starLabel = card.querySelector(".project-stars");
 
       card.dataset.stars = String(count);
-      card.dataset.originalOrder ??= String(index);
 
       if (starLabel) {
         const formattedCount = count.toLocaleString("en-US");
@@ -202,14 +201,6 @@
         starLabel.setAttribute("aria-label", `GitHub Stars: ${formattedCount}`);
       }
     });
-
-    projectCards
-      .sort(
-        (a, b) =>
-          Number(b.dataset.stars) - Number(a.dataset.stars) ||
-          Number(a.dataset.originalOrder) - Number(b.dataset.originalOrder),
-      )
-      .forEach((card) => portfolioGrid?.append(card));
   };
 
   const loadPortfolioStars = async () => {
