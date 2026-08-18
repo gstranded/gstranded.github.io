@@ -681,21 +681,6 @@ figcaption {
   object-fit: cover;
 }
 
-.project-lang {
-  position: absolute;
-  left: 12px;
-  bottom: 10px;
-  padding: 3px 9px;
-  border-radius: 999px;
-  background: rgba(11, 18, 32, 0.42);
-  color: #fff;
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-}
-
 .project-entry h3 a {
   color: var(--ink);
   text-decoration: none;
