@@ -90,6 +90,43 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
+  /* ---------- 3.5 架构图灯箱 ---------- */
+
+  const lightbox = document.querySelector("#lightbox");
+  const lightboxImage = lightbox?.querySelector("img");
+  const lightboxClose = lightbox?.querySelector(".lightbox-close");
+
+  const closeLightbox = () => {
+    if (!lightbox) return;
+    lightbox.hidden = true;
+    document.body.classList.remove("lightbox-open");
+    lightboxImage?.removeAttribute("src");
+  };
+
+  if (lightbox) {
+    document.querySelectorAll(".arch-figure img").forEach((img) => {
+      img.addEventListener("click", () => {
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt;
+        lightbox.hidden = false;
+        document.body.classList.add("lightbox-open");
+        lightboxClose?.focus();
+      });
+    });
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox || event.target === lightboxClose) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !lightbox.hidden) {
+        closeLightbox();
+      }
+    });
+  }
+
   /* ---------- 4. 导航滚动高亮 ---------- */
 
   const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
