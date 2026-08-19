@@ -104,15 +104,21 @@
   };
 
   if (lightbox) {
-    document.querySelectorAll(".arch-figure img").forEach((img) => {
-      img.addEventListener("click", () => {
-        lightboxImage.src = img.src;
-        lightboxImage.alt = img.alt;
-        lightbox.hidden = false;
-        document.body.classList.add("lightbox-open");
-        lightboxClose?.focus();
+    document
+      .querySelectorAll(
+        ".media-proof figure, .paper-figure, .project-cover, .arch-figure, .hero-photo-frame",
+      )
+      .forEach((wrap) => {
+        wrap.addEventListener("click", () => {
+          const img = wrap.querySelector("img");
+          if (!img) return;
+          lightboxImage.src = img.src;
+          lightboxImage.alt = img.alt;
+          lightbox.hidden = false;
+          document.body.classList.add("lightbox-open");
+          lightboxClose?.focus();
+        });
       });
-    });
 
     lightbox.addEventListener("click", (event) => {
       if (event.target === lightbox || event.target === lightboxClose) {

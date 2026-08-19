@@ -863,6 +863,14 @@ figcaption {
   font-size: 0.82rem;
 }
 
+.arch-figure,
+.media-proof figure,
+.paper-figure,
+.project-cover,
+.hero-photo-frame {
+  cursor: zoom-in;
+}
+
 .lightbox {
   position: fixed;
   inset: 0;
