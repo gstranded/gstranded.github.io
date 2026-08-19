@@ -871,6 +871,18 @@ figcaption {
   cursor: zoom-in;
 }
 
+/* 图片不可拖拽/选择，点击即放大 */
+.media-proof img,
+.paper-figure img,
+.project-cover img,
+.arch-figure img,
+.hero-photo-frame img {
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
 .lightbox {
   position: fixed;
   inset: 0;
